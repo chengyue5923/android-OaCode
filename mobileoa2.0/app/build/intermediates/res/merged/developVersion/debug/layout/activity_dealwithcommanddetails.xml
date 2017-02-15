@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/background_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <include layout="@layout/title_homecommon_layout"
+             android:id="@+id/dealWithCommandDetails_title"/>
+
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_launcher"
+               android:layout_below="@id/dealWithCommandDetails_title"
+               android:id="@+id/command_personPhoto"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/command_personPhoto"
+              android:layout_below="@id/dealWithCommandDetails_title"
+              android:text="@string/app_name"
+              android:id="@+id/command_personName"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/command_personName"
+              android:id="@+id/command_showTime"
+              android:layout_toRightOf="@id/command_personPhoto"
+              android:text="@string/app_name"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:id="@+id/command_replyContent"
+              android:layout_below="@id/command_personPhoto"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/reminder_me"
+              android:id="@+id/command_content"
+              android:layout_below="@id/command_replyContent"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/command_timeout"
+              android:text="@string/praise"
+              android:visibility="gone"
+              android:layout_below="@id/command_content"/>
+
+    <RelativeLayout android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/replyListViewHeader"
+                    android:layout_below="@id/command_content">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/reply"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentRight="true"
+                  android:text="@string/praise"/>
+    </RelativeLayout>
+
+    <ListView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/replyListViewHeader">
+    </ListView>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/dealWithCommandDetails_title"
+              android:text="@string/app_name"
+              android:id="@+id/command_state"
+              android:layout_alignParentRight="true"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:id="@+id/command_writeReply"
+                  android:gravity="center"
+                  android:text="@string/writeReply"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:id="@+id/command_save"
+                  android:gravity="center"
+                  android:text="@string/person_tab_collect"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:id="@+id/command_praise"
+                  android:gravity="center"
+                  android:text="@string/praise"/>
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:id="@+id/command_cancel"
+                  android:text="@string/cancel"
+                  android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_dealwithcommanddetails.xml -->

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/fragment_home_titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:rightText="部门"
+        main_title:showLeft="false"
+        main_title:showRight="true"
+        main_title:showRightText="true"
+        main_title:titleCenter="通讯录" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#c8c9cd"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp">
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contacteditbg"
+            android:clickable="true"
+            android:ellipsize="start"
+            android:focusable="false"
+            android:gravity="center"
+            android:imeOptions="actionSearch"
+            android:inputType="none"
+            android:singleLine="true"
+            android:tag="搜索"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/searchLayou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/departLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_item_height"
+        android:background="@color/white"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/suncompany"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/iconSun"/>
+        <TextView
+            android:id="@+id/fragment_home_workalarm"
+            android:layout_toRightOf="@+id/iconSun"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:text="子公司列表"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/title_common_padding"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.idxk.mobileoa.android.ui.views.widget.pullllistview.XListView
+            android:id="@+id/myListView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparence"
+            android:divider="@color/transparence"
+            android:listSelector="@drawable/transparence" />
+        <!--<com.idxk.mobileoa.android.ui.views.widget.MyLetterListView-->
+        <!--android:id="@+id/sideBar"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="22px"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+
+        <!--/>-->
+        <com.idxk.mobileoa.android.ui.views.widget.MyLetterListView
+            android:id="@+id/sideBar"
+            android:layout_width="19dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#40000000" />
+
+    </RelativeLayout>
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_contact.xml -->

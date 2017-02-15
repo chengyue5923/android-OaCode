@@ -1,0 +1,153 @@
+package com.idxk.mobileoa.utils.net.connect.http;
+
+import android.content.Context;
+
+import com.idxk.mobileoa.exception.DefalutNetException;
+import com.idxk.mobileoa.exception.NetException;
+import com.idxk.mobileoa.exception.NotConnectException;
+import com.idxk.mobileoa.exception.TimeOutException;
+import com.idxk.mobileoa.utils.common.android.Common;
+import com.idxk.mobileoa.utils.common.android.Logger;
+import com.idxk.mobileoa.utils.common.java.MapUtils;
+import com.idxk.mobileoa.utils.net.callback.HttpNetCallBack;
+import com.idxk.mobileoa.utils.net.callback.NetCallback;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
+
+import java.net.SocketTimeoutException;
+import java.util.Map;
+
+/**
+ * 实现 httpclient 的manager
+ */
+public class HttpClientManager implements HttpNetCallBack {
+
+    static AsyncHttpClient client = new AsyncHttpClient();
+    static Context context;
+
+    public static HttpClientManager getInstance(Context con) {
+        context = con;
+        client = new AsyncHttpClient();
+        return SingleClearCach.instance;
+
+    }
+
+    @Override
+    public void get(String url, Map<String, Object> params, long timeOut, boolean cach, NetCallback responesCallBack) throws NetException {
+        client.setTimeout((int) timeOut);
+        client.setConnectTimeout((int) timeOut);
+        url = MapUtils.map2UrlParams(url, params);
+        Logger.e("netRequest url==" + url);
+        client.get(url, new ReslutCallBack(responesCallBack));
+    }
+
+    @Override
+    public void getWithHeader(String url, Map<String, Object> params, Map<String, String> header, long timeOut, boolean cach, NetCallback responesCallBack) throws NetException {
+        client.setTimeout((int) timeOut);
+        client.setConnectTimeout((int) timeOut);
+        url = MapUtils.map2UrlParams(url, params);
+        addHeader(header);
+        client.get(url, new ReslutCallBack(responesCallBack));
+    }
+
+    @Override
+    public void post(String url, Map<String, Object> params, long timeOut, boolean cach, NetCallback responesCallBack) throws NetException {
+        client.setTimeout((int) timeOut);
+        client.setConnectTimeout((int) timeOut);
+        client.post(context, url, addParam(params), new ReslutCallBack(responesCallBack));
+
+    }
+
+    @Override
+    public void postWithHeader(String url, Map<String, Object> params, Map<String, String> header, long timeOut, boolean cach, NetCallback responesCallBack) throws NetException {
+        client.setTimeout((int) timeOut);
+        client.setConnectTimeout((int) timeOut);
+        addHeader(header);
+        client.post(context, url, addParam(params), new ReslutCallBack(responesCallBack));
+    }
+
+    @Override
+    public void cancle() {
+        client.cancelRequests(context, true);
+    }
+
+    private void addHeader(Map<String, String> header) {
+        for (Map.Entry<String, String> entry : header.entrySet()) {
+            client.addHeader(entry.getKey(), entry.getValue());
+        }
+
+    }
+
+    private RequestParams addParam(Map<String, Object> param) {
+        RequestParams params1 = new RequestParams();
+        for (Map.Entry<String, ?> entry : param.entrySet()) {
+            params1.put(entry.getKey(), entry.getValue());
+
+        }
+        return params1;
+
+
+    }
+
+    static class SingleClearCach {
+        static HttpClientManager instance = new HttpClientManager();
+    }
+
+    public class ReslutCallBack extends AsyncHttpResponseHandler {
+
+        NetCallback responesCallBack;
+
+        public ReslutCallBack(NetCallback responesCallBack) {
+            this.responesCallBack = responesCallBack;
+        }
+
+        @Override
+        public void onStart() {
+            super.onStart();
+            responesCallBack.onstart();
+
+
+        }
+
+        @Override
+        public void onSuccess(int i, Header[] headers, byte[] bytes) {
+
+            try {
+
+                String reslut = new String(bytes,"UTF-8");
+                Logger.e("netRequest result=0" );
+                responesCallBack.dealReslut(reslut);
+                Logger.e("netRequest result=" + reslut);
+
+            } catch (Exception e) {
+                Logger.e(e.getLocalizedMessage(),e);
+                Logger.e("转换异常");
+            }
+            responesCallBack.onEnd();
+
+
+        }
+
+        @Override
+        public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
+            Logger.e("netRequest Fail =");
+            Logger.e(throwable.getLocalizedMessage());
+            responesCallBack.onEnd();
+            if (throwable instanceof SocketTimeoutException) {
+                responesCallBack.dealFailer(new TimeOutException());
+                return;
+            }
+            if (!Common.isNetworkAvailable()) {
+                responesCallBack.dealFailer(new NotConnectException());
+                return;
+            }
+            responesCallBack.dealFailer(new DefalutNetException());
+        }
+
+
+    }
+
+}

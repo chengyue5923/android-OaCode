@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/feedBack_mainTitleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:showLeft="true"
+        main_title:showRight="true"
+        main_title:showRightText="true"
+        main_title:titleCenter="@string/person_main_item_feedback"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+    <EditText
+        android:id="@+id/feedBack_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginRight="@dimen/tendp"
+        android:layout_marginTop="@dimen/tendp"
+        android:background="@drawable/bg_edittext_normal"
+        android:gravity="left"
+        android:hint="@string/feedback_hit"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/adviseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginRight="@dimen/tendp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/improveAdvise"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/tendp"
+            android:gravity="center"
+            android:text="@string/improveAdvise"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/feedBack_rotatePic"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/tendp"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/feedBackTypeListView"
+        style="@style/comsoft_Listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginRight="@dimen/tendp"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone"></ListView>
+
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_feedback.xml -->

@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/tab_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tt_contact_top_left_sel"
+        android:gravity="center"
+        android:text="@string/contact_all"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/layout/tt_top_tab.xml --><!-- From: file:/D:/oa/mobileoa2.0/app/build/intermediates/exploded-aar/mobileoa2.0/teamtalkapp/unspecified/res/layout/tt_top_tab.xml -->

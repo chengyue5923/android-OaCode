@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<url>
+    <interface id="1">
+        <actioin>app=api!mod=Oauth!act=authorize!isIphone=1</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>false</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="1" show="登陆" />
+    </interface>
+    <interface id="2">
+        <actioin>app=api!mod=WeiboStatuses!act=public_timeline!format=json!since_id=0</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="3">
+        <actioin>app=api!mod=WeiboStatuses!act=show!</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="4">
+        <actioin>app=api!mod=WeiboStatuses!act=comments!</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="5">
+        <actioin>app=api!mod=ProfileSetting!act=get_department!</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="6">
+        <actioin>app=api!mod=User!act=show!</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="7">
+        <actioin>app=api!mod=WeiboStatuses!act=update!</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="2" show="发送" />
+    </interface>
+    <interface id="8">
+        <actioin>app=api!mod=WeiboStatuses!act=add_digg</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="9">
+        <actioin>app=api!mod=WeiboStatuses!act=del_digg</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="10">
+        <actioin>app=api!mod=WeiboStatuses!act=comment</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="3" show="评论" />
+    </interface>
+    <interface id="11">
+        <actioin>app=api!mod=WeiboStatuses!act=mentions_feed!</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="12">
+        <actioin>app=api!mod=WeiboStatuses!act=weibo_search_weibo</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="13">
+        <actioin>app=api!mod=WeiboStatuses!act=weibo_search_user</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="14">
+        <actioin>app=api!mod=WeiboStatuses!act=worklog_list</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="15">
+        <actioin>app=api!mod=WeiboStatuses!act=order_rel_list</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="16">
+        <actioin>app=api!mod=WeiboStatuses!act=approval_rel_list</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="17">
+        <actioin>app=api!mod=WeiboStatuses!act=operate_num</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="18">
+        <actioin>app=api!mod=ProfileSetting!act=address_list!</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="19">
+        <actioin>app=api!mod=System!act=comments_to_me</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="20">
+        <actioin>app=api!mod=System!act=comments_by_me</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="21">
+        <actioin>app=api!mod=WeiboStatuses!act=upload</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>true</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="22">
+        <actioin>app=api!mod=WeiboStatuses!act=doSaveAvatar</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>true</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="4" show="用户头像上传" />
+    </interface>
+    <interface id="23">
+        <actioin>app=api!mod=Notifytion!act=get_notify_by_count</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+
+    <interface id="24">
+        <actioin>app=api!mod=WeiboStatuses!act=get_feed_digg_user</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="25">
+        <actioin>app=api!mod=WeiboStatuses!act=send_work</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="26">
+        <actioin>app=api!mod=WeiboStatuses!act=get_feedback_type</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="0" show="" />
+    </interface>
+    <interface id="27">
+        <actioin>app=api!mod=WeiboStatuses!act=feedback</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>true</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="5" show="发送" />
+    </interface>
+    <interface id="28">
+        <actioin>app=api!mod=WeiboStatuses!act=add_bind</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="6" show="绑定" />
+    </interface>
+    <interface id="29">
+        <actioin>app=api!mod=WeiboStatuses!act=del_bind</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="7" show="解除绑定" />
+    </interface>
+    <interface id="30">
+        <actioin>app=api!mod=WeiboStatuses!act=get_app_list</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="" />
+    </interface>
+    <interface id="31">
+        <actioin>app=api!mod=ProfileSetting!act=address_by_dep</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="" />
+    </interface>
+    <interface id="32">
+        <actioin>app=api!mod=ApprovalForm!act=approval_list</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>true</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="" />
+    </interface>
+    <interface id="33">
+        <actioin>app=api!mod=WeiboStatuses!act=out_notice</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="" />
+    </interface>
+    <interface id="34">
+        <actioin>app=api!mod=WeiboStatuses!act=set_out_notice_status</actioin>
+        <timeout>10000</timeout>
+        <method>0</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="" />
+    </interface>
+    <interface id="35">
+        <actioin>app=api!mod=ProfileSetting!act=update_intro</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="8" show="签名修改" />
+    </interface>
+    <interface id="36">
+        <actioin>api?message?yapull</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="8" show="消息轮询" />
+    </interface>
+    <interface id="37">
+        <actioin>api!message!publish</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>true</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>true</showLoadDialog>
+        <showNotify>true</showNotify>
+        <nofiy id="8" show="发送消息" />
+    </interface>
+    <interface id="38">
+        <actioin>api!Im!get_message</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>false</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="语音内功" />
+    </interface>
+    <interface id="39">
+        <actioin>api!Im!get_new_message</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>false</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="获取详细消息内容接口" />
+    </interface>
+    <interface id="40">
+        <actioin>api!Im!pub</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>false</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="获取详细消息内容接口" />
+    </interface>
+    <interface id="41">
+        <actioin>api!Upload!imgAdd</actioin>
+        <timeout>10000</timeout>
+        <method>1</method>
+        <cach>false</cach>
+        <https>false</https>
+        <header>false</header>
+        <needLogin>false</needLogin>
+        <showToast>false</showToast>
+        <showLoadDialog>false</showLoadDialog>
+        <showNotify>false</showNotify>
+        <nofiy id="8" show="获取详细消息内容接口" />
+    </interface>
+</url>

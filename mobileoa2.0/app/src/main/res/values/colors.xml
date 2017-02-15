@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="logincolor">#4fc1e9</color>
+    <color name="edittext_noselected">#66ffffff</color>
+    <color name="login_text_color">#d4e0e9</color>
+    <color name="input_hit_color">#d4e4f1</color>
+    <color name="input_text_color">#FFFFFFFF</color>
+    <color name="background_color">#ededef</color>
+    <color name="color_e1e1e1a10">#ffe1e1e1</color>
+    <color name="circlecolor">#dbdcdd</color>
+    <color name="common_title">#F9F9F9</color>
+    <color name="common_title_text">#46464B</color>
+    <color name="common_back_ground">#E6E6EB</color>
+    <drawable name="transparence">#00000000</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="gray">#D6D6D6</drawable>
+    <drawable name="white">#FFFFFFFF</drawable>
+    <color name="color_dfdfdf">#ffdfdfdf</color>
+    <color name="color_ecececa10">#FFECECEC</color>
+    <color name="color_738e82a10">#FF738e82</color>
+    <color name="color_ff87c624">#87c624</color>
+    <color name="color_edededa10">#FFEDEDED</color>
+    <drawable name="blue">#85D3EF</drawable>
+    <drawable name="dark_blue">#4CBEE8</drawable>
+    <drawable name="yellow">#FEC544</drawable>
+    <drawable name="half_transparence">#25000000</drawable>
+    <color name="chat_back">#EBEBEB</color>
+    <color name="transparence">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="gray">#D6D6D6</color>
+    <color name="white">#ffffff</color>
+    <drawable name="mobileClick">#e6e6e6</drawable>
+    <color name="tabTextNormal">#999999</color>
+    <color name="blue">#85D3EF</color>
+    <color name="dark_blue">#4CBEE8</color>
+    <color name="loginEditTextColor">#333333</color>
+    <color name="yellow">#FEC544</color>
+    <color name="half_transparence">#25000000</color>
+
+    <!--工作提醒-->
+    <color name="workAlarmTextColor">#323333</color>
+    <color name="workAlarmLayoutBackColor">#ffffff</color>
+    <color name="workAlarmLineColor">#ededef</color>
+    <color name="workAlarmBackgroundColor">#edecee</color>
+
+
+    <color name="bottomBarColor">#454545</color>
+
+
+    <!-- 登陆界面颜色渐变-->
+    <color name="startTop">#3188d6</color>
+    <color name="endBottom">#206192</color>
+
+    <color name="title_color">#1f5e8d</color>
+
+    <color name="click_color">#00436e</color>
+
+
+    <color name="home_tab_text_defalut">#999695</color>
+    <color name="home_tab_text_select">#206192</color>
+
+    <color name="contact_section">#f7f7f7</color>
+
+    <color name="light_grey">#f0f0f0</color>
+    <color name="tab_text_on_color">#1f5e8d</color>
+
+
+    <color name="circle_color">#323a45</color>
+    <color name="ring_color">#14b9d6</color>
+    <color name="none_color">#00000000</color>
+</resources>

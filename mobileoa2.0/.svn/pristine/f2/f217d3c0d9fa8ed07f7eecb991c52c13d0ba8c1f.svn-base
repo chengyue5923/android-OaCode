@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededef">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/fragment_home_titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/magnifying"
+        main_title:rightImage="@drawable/magnifying"
+        main_title:showLeft="false"
+        main_title:showRight="false"
+        main_title:titleCenter="应用"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/fragment_home_titleHome"
+        android:id="@+id/gv"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:layout_centerHorizontal="true"
+        android:listSelector="@drawable/transparence"
+        android:scrollbars="none"
+        >
+    </GridView>
+
+
+</RelativeLayout>

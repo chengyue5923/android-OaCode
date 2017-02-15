@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fresh_item_bg">
+
+    <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+        android:id="@+id/dealWithDiary_personPic"
+        android:layout_width="@dimen/frehs_lv_item_iv_WH"
+        android:layout_height="@dimen/frehs_lv_item_iv_WH"
+        android:layout_margin="@dimen/tendp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_personName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tendp"
+        android:layout_toRightOf="@id/dealWithDiary_personPic"
+        android:text="@string/app_name"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_personTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_personName"
+        android:layout_toRightOf="@id/dealWithDiary_personPic"
+
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_state"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/tendp"
+        android:layout_marginTop="@dimen/tendp"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_commentPerson"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_personPic"
+        android:layout_marginLeft="@dimen/tendp" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_todayWorkSummary"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_commentPerson"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/todayWorkSummary" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_todayWorkSummaryContent"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_todayWorkSummary"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_tomorrowWorkPlan"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_todayWorkSummaryContent"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/tomorrowWorkPlan" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_tomorrowWorkPlanContent"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_tomorrowWorkPlan"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_workSummary"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_tomorrowWorkPlanContent"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/workSummary" />
+
+    <TextView
+        android:id="@+id/dealWithDiary_workSummaryContent"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiary_workSummary"
+        android:layout_marginLeft="@dimen/tendp"
+        android:text="@string/app_name" />
+
+    <!--<View android:layout_width="wrap_content"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_below="@id/dealWithDiary_workSummaryContent"-->
+    <!--android:background="#d9dadc"/>-->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/dealWithDiary_workSummaryContent"
+        android:src="#f1f1f1" />
+
+    <LinearLayout
+        android:id="@+id/dealWithDiaryCommentBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/frehs_lv_item_bottom_Height"
+        android:layout_below="@id/dealWithDiary_workSummaryContent"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/commentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/comment" />
+
+            <TextView
+                android:id="@+id/dealWithDiary_comment"
+                style="@style/fresh_lv_item_bottom_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comment" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:src="#f1f1f1" />
+
+        <LinearLayout
+            android:id="@+id/zanLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/zanPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/zan" />
+
+            <TextView
+                android:id="@+id/dealWithDiary_praise"
+                style="@style/fresh_lv_item_bottom_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/praise" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dealWithDiaryDetailsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealWithDiaryCommentBar"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/dealWithDiary_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/reply" />
+
+        <TextView
+            android:id="@+id/dealWithDiary_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/person_tab_collect" />
+
+        <TextView
+            android:id="@+id/dealWithDiaryDetailsPraise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/praise" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/selectPerson_mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:showLeft="true"
+        main_title:showRight="true"
+        main_title:showTitle="true"
+        main_title:titleCenter="@string/selectExecutorPerson"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_below="@id/selectPerson_mainTitle"
+        android:background="#c8c9cd"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/selectPersonSearch"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/contacteditbg"
+            android:ellipsize="start"
+            android:gravity="center"
+            android:hint="搜索"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectScope_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/light_grey"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/selectScope_hasSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hasSelected" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/title_common_padding"
+            android:src="@drawable/row_item"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/selectScope_Layout"
+        android:layout_below="@id/searchLayout"
+        android:orientation="horizontal"></LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_selectperson.xml -->

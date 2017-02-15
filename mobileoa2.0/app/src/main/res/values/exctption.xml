@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="noconnect">手机网络异常</string>
+    <string name="timeoutconnect">网络连接超时</string>
+    <string name="otherconnect">网络连接异常</string>
+</resources>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/workAlarmBackgroundColor"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/workAlarm_titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:showLeft="true"
+        main_title:showRight="false"
+        main_title:titleCenter="工作提醒" />
+
+    <RelativeLayout
+        android:id="@+id/workAlarm_waitForDealWithLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftysix"
+        android:background="@color/workAlarmLayoutBackColor"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/nodealwith"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/nodealwith" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waitForDealWith"
+                android:textColor="@color/workAlarmTextColor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_padding"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/waitForDealNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/tendp"
+                android:background="@drawable/num_bg"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/waitForDealWithEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/row_item" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/workAlarmLineColor" />
+
+    <RelativeLayout
+        android:id="@+id/reminderMeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftysix"
+        android:background="@color/workAlarmLayoutBackColor"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/reminderMePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/reminderme" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/reminderMePic"
+                android:gravity="center_vertical"
+                android:text="@string/reminder_me"
+                android:textColor="@color/workAlarmTextColor" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_padding"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/workAlarm_atMeNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/tendp"
+                android:background="@drawable/num_bg"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/row_item" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/workAlarmLineColor" />
+
+    <RelativeLayout
+        android:id="@+id/receivedMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftysix"
+        android:background="@color/workAlarmLayoutBackColor"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ireceived"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/ireceived" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:text="@string/activity_workalarm_ireceived"
+                android:textColor="@color/workAlarmTextColor" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/common_padding"
+            android:src="@drawable/row_item" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/workAlarmLineColor" />
+
+    <RelativeLayout
+        android:id="@+id/sendMessageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftysix"
+        android:background="@color/workAlarmLayoutBackColor"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/isend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/isend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_workalarm_isendreply"
+                android:textColor="@color/workAlarmTextColor" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/common_padding"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/workAlarmLineColor" />
+
+    <RelativeLayout
+        android:id="@+id/workAlarm_sendWorkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftysix"
+        android:background="@color/workAlarmLayoutBackColor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ipraise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/tendp"
+                android:layout_marginRight="@dimen/tendp"
+                android:src="@drawable/isendwork" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                android:text="@string/sendWork"
+                android:textColor="@color/workAlarmTextColor" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/common_padding"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/workAlarmLineColor" />
+
+    <RelativeLayout
+        android:id="@+id/praiseReceivedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fiftysix"
+        android:background="@color/workAlarmLayoutBackColor"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ipraisePic"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_marginLeft="@dimen/tendp"
+            android:layout_marginRight="@dimen/tendp"
+            android:src="@drawable/ipraise" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_toRightOf="@id/ipraisePic"
+            android:gravity="center_vertical|left"
+            android:text="@string/praise_received"
+            android:textColor="@color/workAlarmTextColor" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/fiftysix"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/common_padding"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+
+</LinearLayout>

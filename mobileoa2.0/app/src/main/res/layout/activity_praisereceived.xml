@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.HomeCommonTitle
+        android:id="@+id/praiseReceivedHomeCommonTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:homeLeftImage="@drawable/title_back"
+        main_title:homeTitle="@string/praise_received"></com.idxk.mobileoa.android.ui.views.widget.HomeCommonTitle>
+
+    <ListView
+        android:id="@+id/praiseReceivedListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+</LinearLayout>

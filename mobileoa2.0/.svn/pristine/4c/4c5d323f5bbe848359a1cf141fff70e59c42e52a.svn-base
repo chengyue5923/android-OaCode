@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f9f9f9"
+    android:descendantFocusability="blocksDescendants">
+
+    <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+        android:id="@+id/weiBoDetailsOperatePic"
+        android:layout_width="@dimen/frehs_lv_item_bottom_Height"
+        android:layout_height="@dimen/frehs_lv_item_bottom_Height"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="@dimen/fivedp"
+        android:layout_marginTop="@dimen/fivedp"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/weiBoDetailsOperateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/weiBoDetailsOperatePic"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/weiBoDetailsOperateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/app_name"
+            android:textColor="#333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/weiBoDetailsOperateContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/app_name"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <com.idxk.mobileoa.android.ui.views.widget.ListViewForScrollView
+            android:id="@+id/reply_attach_listView"
+            style="@style/comsoft_Listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="@dimen/title_common_padding"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/weiBoDetailsOperateShowTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/app_name"
+            android:textColor="#666666"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/weiBoDetailsOperateReply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/common_word_padding"
+        android:text="@string/reply"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/weiBoDetailsOperatePraise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_word_padding"
+        android:layout_toLeftOf="@id/weiBoDetailsOperateReply"
+        android:text="@string/praise"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/weiBoDetailsOperatePraiseTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/praiseTimes"
+        android:visibility="gone" />
+
+</RelativeLayout>

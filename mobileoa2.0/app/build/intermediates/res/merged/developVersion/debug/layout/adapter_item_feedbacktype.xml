@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feedBack_item"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/tendp"
+    android:gravity="center_vertical"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingLeft="@dimen/tendp"
+    android:textColor="@color/black"
+    android:textSize="13sp" /><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/adapter_item_feedbacktype.xml -->

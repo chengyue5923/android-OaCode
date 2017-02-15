@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_title_hight"
+    android:background="@color/title_color">
+
+    <LinearLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/titleHomeCommonPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:src="@drawable/title_back" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/titleHomeCommonTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/title_homecommon_layout.xml -->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececee"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/fresh_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/group"
+        main_title:rightImage="@drawable/searchrefresh"
+        main_title:showLeft="true"
+        main_title:showRight="true"
+        main_title:showTrigon="true"
+        main_title:titleCenter="@string/person_tab_all" />
+
+    <com.idxk.mobileoa.android.ui.views.widget.pullllistview.XListView
+        android:id="@+id/fresh_listview"
+        style="@style/comsoft_Listview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:layout_marginTop="@dimen/title_common_padding"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/title_common_padding"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:scrollbarStyle="outsideOverlay" />
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/fragment_fresh.xml -->

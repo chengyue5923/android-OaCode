@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@color/background_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <include layout="@layout/title_fresh_layout"
+             android:id="@+id/title_fresh_layout"/>
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/black"/>
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/common_padding"
+              android:id="@+id/activity_sendshare_sendcontent"
+              android:layout_marginLeft="@dimen/common_padding"
+              android:layout_marginRight="@dimen/common_padding"
+              android:background="@null"
+              android:minLines="10"
+              android:gravity="left|top"
+              android:inputType="textMultiLine"
+              android:layout_below="@id/title_fresh_layout"/>
+    <ImageView android:layout_width="@dimen/add_pic_height"
+               android:layout_height="@dimen/add_pic_height"
+               android:layout_below="@id/activity_sendshare_sendcontent"
+               android:id="@+id/activity_sendshare_showPic"/>
+
+    <com.idxk.mobileoa.android.ui.views.widget.BottomBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/commonBottomBar"
+            android:layout_alignParentBottom="true">
+    </com.idxk.mobileoa.android.ui.views.widget.BottomBar>
+    <!--<include layout="@layout/bottombar_common_layout"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/commonBottomBar"-->
+    <!--android:layout_alignParentBottom="true"/>-->
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_commentdiary.xml -->

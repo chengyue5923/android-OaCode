@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/home_item_height"
+        android:background="@color/white"
+        android:gravity="center"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/suncompany"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible"
+            android:id="@+id/iconSun"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_toRightOf="@+id/iconSun"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/title_common_padding"
+            android:text="子公司列表"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/title_common_padding"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+</LinearLayout>

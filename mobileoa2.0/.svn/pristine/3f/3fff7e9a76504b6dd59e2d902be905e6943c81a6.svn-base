@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.HomeCommonTitle
+        android:id="@+id/workSend_homeCommonTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:homeLeftImage="@drawable/title_back"
+        main_title:homeTitle="@string/sendWork" />
+
+    <!--<com.viewpagerindicator.TabPageIndicator-->
+    <!--android:id="@+id/workSend_indicator"-->
+    <!--android:background="@drawable/action_bar_bg"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_width="match_parent"/>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/workSend_pager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+    <com.idxk.mobileoa.android.ui.views.widget.MyListView
+        android:id="@+id/fresh_listview"
+        style="@style/comsoft_Listview"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:layout_marginTop="@dimen/title_common_padding"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/title_common_padding"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"></com.idxk.mobileoa.android.ui.views.widget.MyListView>
+</LinearLayout>

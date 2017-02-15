@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+        >
+
+    <include
+        android:id="@+id/title_fresh_layout"
+        layout="@layout/title_fresh_layout" />
+    <View android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:background="@color/black"/>
+
+    <EditText
+        android:id="@+id/activity_reply_sendcontent"
+        android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+        android:layout_below="@id/title_fresh_layout"
+        android:layout_marginBottom="50dp"
+              android:layout_marginLeft="@dimen/common_padding"
+              android:layout_marginRight="@dimen/common_padding"
+        android:layout_marginTop="@dimen/common_padding"
+        android:background="@null"
+        android:gravity="left|top"
+        android:inputType="textMultiLine"
+        android:minLines="10"
+        android:textSize="21sp" />
+
+    <ImageView
+        android:id="@+id/activity_reply_showPic"
+        android:layout_width="@dimen/add_pic_height"
+               android:layout_height="@dimen/add_pic_height"
+        android:layout_below="@id/activity_reply_sendcontent" />
+
+    <com.idxk.mobileoa.android.ui.views.widget.BottomBar
+        android:id="@+id/commonBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+    </com.idxk.mobileoa.android.ui.views.widget.BottomBar>
+
+    <Button
+        android:id="@+id/nextPerson"
+        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:layout_above="@id/commonBottomBar"
+            android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="10dp"
+            android:background="@drawable/rangebg"
+            android:drawableLeft="@drawable/commentperson"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/nextPerson"
+        android:textSize="15sp"
+        android:visibility="visible" />
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_reply.xml -->

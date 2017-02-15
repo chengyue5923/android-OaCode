@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/half_transparence">
+
+    <Button android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/mobile_bg"
+        android:onClick="cancleClick"
+        android:textSize="18sp"
+        android:id="@+id/cancleBt"
+        android:text="取消"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+
+        />
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:background="#ffffff"
+                  android:layout_marginBottom="10dp"
+                  android:layout_above="@+id/cancleBt"
+                  android:layout_height="wrap_content"
+                  >
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="1px"
+                   android:src="@color/gray"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                     >
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:text="请选择获取方式"
+                      android:textSize="15sp"
+                      android:textColor="#666666"
+                      android:gravity="center"
+                      android:id="@+id/titleTv"
+                      />
+            <ImageView android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:src="@color/gray"/>
+
+            <ListView android:layout_width="match_parent"
+                      android:id="@+id/lv"
+                      style="@style/comsoft_Listview"
+                      android:divider="@drawable/gray"
+                     android:dividerHeight="1dp"
+                      android:layout_height="wrap_content">
+
+            </ListView>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

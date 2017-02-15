@@ -1,0 +1,46 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="2dip"/>
+            <gradient
+                    android:startColor="#464f5a"
+                    android:centerColor="#464f5a"
+                    android:centerY="0.75"
+                    android:endColor="#464f5a"
+                    android:angle="270"
+                    />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="2dip"/>
+                <gradient
+                        android:startColor="#0994ff"
+                        android:centerColor="#0994ff"
+                        android:centerY="0.75"
+                        android:endColor="#0994ff"
+                        android:angle="270"
+                        />
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="2dip"/>
+                <gradient
+                        android:startColor="#0994ff"
+                        android:centerColor="#0994ff"
+                        android:centerY="0.75"
+                        android:endColor="#0994ff"
+                        android:angle="270"
+                        />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list> <!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/drawable/progressbar.xml -->

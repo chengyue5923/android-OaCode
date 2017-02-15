@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    android:orientation="vertical">
+
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:rightImage="@drawable/magnifying"
+        main_title:showLeft="true"
+        main_title:showRight="true"
+        main_title:titleCenter="@string/department_list"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/person_infor_barnerH"
+        android:background="@color/gray"
+        android:paddingBottom="@dimen/person_infor_barner_PaddingTB"
+        android:paddingLeft="@dimen/person_infor_barner_PaddingLR"
+        android:paddingRight="@dimen/person_infor_barner_PaddingLR"
+        android:paddingTop="@dimen/person_infor_barner_PaddingTB">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/white" />
+
+            <ImageView
+                android:id="@+id/personIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/personIcon"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="禮拜" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="鐘敏投科技部" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.idxk.mobileoa.android.ui.views.widget.PersonDetailTab
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.idxk.mobileoa.android.ui.views.widget.PersonDetailTab>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

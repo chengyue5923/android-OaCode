@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fresh_item_bg">
+
+    <TextView
+        android:id="@+id/command_state"
+        style="@style/fresh_lv_item_nomoal_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/twelvedp"
+        android:layout_marginRight="@dimen/twelvedp"
+        android:layout_marginTop="@dimen/twelvedp"
+        android:paddingRight="10dp" />
+
+    <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+        android:id="@+id/command_personPhoto"
+        android:layout_width="@dimen/frehs_lv_item_iv_WH"
+        android:layout_height="@dimen/frehs_lv_item_iv_WH"
+        android:layout_margin="@dimen/twelvedp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/command_personName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twelvedp"
+        android:layout_toRightOf="@id/command_personPhoto"
+        android:text="@string/app_name"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/command_showTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/command_personName"
+        android:layout_toRightOf="@id/command_personPhoto"
+        android:text="@string/app_name"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/command_personPhoto"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/command_replyContent"
+            style="@style/fresh_lv_item_nomoal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/command_personPhoto"
+            android:layout_marginLeft="@dimen/twelvedp"
+            android:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/command_content"
+            style="@style/fresh_lv_item_nomoal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/command_replyContent"
+            android:layout_marginLeft="@dimen/twelvedp"
+            android:paddingBottom="10dp"
+            android:text="@string/reminder_me" />
+
+
+        <TextView
+            android:id="@+id/command_timeout"
+            style="@style/fresh_lv_item_nomoal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/command_content"
+            android:layout_marginLeft="@dimen/twelvedp"
+            android:text="@string/praise"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imageShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centerLayout"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:visibility="gone"
+
+        >
+
+        <ImageView
+            android:id="@+id/fileImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/fileShow"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#808080"
+            android:gravity="center"
+            android:text="查看附件"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/imageShow"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dividerLine"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/command_timeout"
+            android:src="#f1f1f1" />
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/frehs_lv_item_bottom_Height"
+            android:layout_below="@id/dividerLine"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/noticeResultLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tendp"
+                    android:src="@drawable/command" />
+
+                <TextView
+                    android:id="@+id/command_writeReply"
+                    style="@style/fresh_lv_item_bottom_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/writeReply" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:src="#f1f1f1" />
+
+            <LinearLayout
+                android:id="@+id/command_replyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/examine_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tendp"
+                    android:src="@drawable/replay" />
+
+                <TextView
+                    android:id="@+id/command_save"
+                    style="@style/fresh_lv_item_bottom_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/person_tab_collect" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:src="#f1f1f1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tendp"
+                    android:src="@drawable/delete_fresh" />
+
+                <TextView
+                    android:id="@+id/command_praise"
+                    style="@style/fresh_lv_item_bottom_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/praise" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/commandView"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingBottom="7dp"
+                android:paddingTop="7dp"
+                android:src="#f1f1f1" />
+
+
+            <LinearLayout
+                android:id="@+id/commandPraiseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/command_zanPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/tendp"
+                    android:src="@drawable/delete_fresh" />
+
+                <TextView
+                    android:id="@+id/command_cancel"
+                    style="@style/fresh_lv_item_bottom_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/adapter_item_dealwithcommand.xml -->

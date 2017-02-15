@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/title_color"
+        android:gravity="center"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/search_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/title_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/cancel"
+            android:textColor="#e9eef3"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/searchContent"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="9dp"
+            android:layout_toLeftOf="@id/search_cancel"
+            android:layout_toStartOf="@id/search_cancel"
+            android:background="@drawable/contacteditbg"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawableStart="@drawable/search_icon"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:hint="搜索工作"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/search_listView"
+        style="@style/comsoft_Listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/title_common_padding"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/title_common_padding"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/search_colleagueListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:cacheColorHint="@color/transparence"
+        android:divider="@color/transparence"
+        android:listSelector="@drawable/transparence"
+        android:scrollbarStyle="outsideOverlay"
+        android:visibility="gone" />
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_search.xml -->

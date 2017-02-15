@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/ablum_titleHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:showLeft="true" />
+
+    <RelativeLayout
+        android:id="@+id/nativeCommon_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dcdcdc"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="共100KB" />
+
+        <Button
+            android:id="@+id/ok_button"
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/plugin_camera_ok_btn_state"
+            android:gravity="center"
+            android:text="确定" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/ablum_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nativeCommon_bottomBar"
+        android:layout_below="@id/ablum_titleHome"
+        android:layout_centerInParent="true"
+        android:horizontalSpacing="10dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/musicListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nativeCommon_bottomBar"
+        android:layout_below="@id/ablum_titleHome"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/filePath"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/ablum_titleHome"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/corners_bg"
+        android:gravity="center_vertical"
+        android:text="123"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/memoryListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nativeCommon_bottomBar"
+        android:layout_below="@id/filePath"
+        android:layout_marginTop="5dp"
+        android:visibility="gone" />
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_album.xml -->

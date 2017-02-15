@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_color">
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/title_fresh_layout" />
+
+    <com.idxk.mobileoa.android.ui.views.widget.BottomBar
+        android:id="@+id/sendDiary_commonBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </com.idxk.mobileoa.android.ui.views.widget.BottomBar>
+
+    <RelativeLayout
+        android:id="@+id/operateLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sendDiary_commonBottomBar"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/sendDiary_sendScope"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+                android:layout_marginLeft="@dimen/common_padding"
+                android:background="@drawable/rangebg"
+            android:drawableLeft="@drawable/flower"
+            android:paddingBottom="6dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:text="@string/sendDiary_sendScope"
+            android:textColor="#1f5e8d"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/sendDiary_commentPerson"
+            android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+                android:layout_marginBottom="12dp"
+            android:layout_marginLeft="@dimen/common_padding"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rangebg"
+            android:drawableLeft="@drawable/flower"
+                android:paddingBottom="6dp"
+            android:paddingLeft="7dp"
+                android:paddingRight="10dp"
+            android:paddingTop="6dp"
+            android:textColor="#1f5e8d"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/operateLayout"
+        android:layout_below="@id/title_layout"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/todayWorkSummaryContent"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/todayWorkSummaryHint"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp" />
+
+            <View
+                android:id="@+id/firstLine"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#999999" />
+
+            <EditText
+                android:id="@+id/tomorrowWorkSummaryContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="@string/tomorrowWorkSummaryHint"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp" />
+
+            <View
+                android:id="@+id/secondLine"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#999999" />
+
+            <EditText
+                android:id="@+id/workSummaryContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:background="@color/white"
+                android:hint="@string/workSummaryHint"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp" />
+
+            <com.idxk.mobileoa.android.ui.views.widget.Sgrideview
+                android:id="@+id/sendDiaryPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:listSelector="@drawable/transparence"
+                android:numColumns="4"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_senddiary.xml -->

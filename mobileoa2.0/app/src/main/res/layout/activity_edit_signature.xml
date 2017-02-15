@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/mainTitleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:showLeft="true"
+        main_title:showRight="true"
+        main_title:showRightText="true"
+        main_title:titleCenter="个人签名"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+    <EditText
+        android:id="@+id/signture_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginRight="@dimen/tendp"
+        android:layout_marginTop="@dimen/tendp"
+        android:background="@drawable/bg_edittext_normal"
+        android:gravity="left"
+        android:hint="您还没有个人签名哦,赶快编辑一个吧！"
+        android:paddingLeft="5dp"
+        android:maxLength="50"
+        android:paddingTop="5dp"
+        android:textSize="14sp" />
+
+
+
+</LinearLayout>

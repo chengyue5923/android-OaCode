@@ -1,0 +1,390 @@
+package com.idxk.mobileoa.android.ui.fragment;
+
+
+import android.app.Fragment;
+import android.content.Context;
+import android.graphics.PixelFormat;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.idxk.mobileoa.R;
+import com.idxk.mobileoa.android.ui.views.adapter.ContactListAdapter;
+import com.idxk.mobileoa.android.ui.views.widget.MainTitleView;
+import com.idxk.mobileoa.android.ui.views.widget.MyLetterListView;
+import com.idxk.mobileoa.android.ui.views.widget.pullllistview.XListView;
+import com.idxk.mobileoa.config.constant.IConstant;
+import com.idxk.mobileoa.logic.controller.ContactController;
+import com.idxk.mobileoa.model.bean.ContactBean;
+import com.idxk.mobileoa.utils.common.android.GsonTool;
+import com.idxk.mobileoa.utils.common.android.IntentTool;
+import com.idxk.mobileoa.utils.common.android.Logger;
+import com.idxk.mobileoa.utils.common.java.StringTools;
+import com.idxk.mobileoa.utils.net.callback.ViewNetCallBack;
+import com.idxk.mobileoa.utils.threads.ContactDbThread;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ *
+ */
+public class ContactFragment extends Fragment implements TextView.OnEditorActionListener, MainTitleView.OnTitleClick,
+        XListView.IXListViewListener, ViewNetCallBack {
+
+    private static ContactFragment instance;
+    XListView list;
+    ContactListAdapter adapter;
+    MyLetterListView indexBar;
+    View view;
+    EditText searchEt;
+    LinearLayout searchLayou;
+    String json;
+    private Handler overLayouHandler;
+    private OverlayThread overlayThread;
+    private TextView overlay;
+    private WindowManager windowManager;
+    private List<ContactBean> contactBeanList;
+    /**
+     * 昵称
+     */
+    private HashMap<String, Integer> alphaIndexer;//存放存在的汉语拼音首字母和与之对应的列表位置
+    private Handler contactHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            try {
+//                adapter.setRes(contactBeanList);
+//                onRefresh();
+            } catch (Exception E) {
+            }
+        }
+    };
+
+    public ContactFragment() {
+    }
+
+    public static ContactFragment getInstance() {
+        if (instance == null) {
+            instance = new ContactFragment();
+        }
+        return instance;
+    }
+
+    @Override
+    public void clickLeft() {
+
+    }
+
+    @Override
+    public void clickRight() {
+        IntentTool.startDepartmentsActivity(getActivity());
+    }
+
+    @Override
+    public void clickCenterTitle() {
+
+    }
+
+    @Override
+    public void onRefresh() {
+        loadSunFromNet();
+    }
+
+    @Override
+    public void onLoadMore() {
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_contact, container, false);
+        contactBeanList = new ArrayList<>();
+        MainTitleView fragment_home_titleHome = (MainTitleView) view.findViewById(R.id.fragment_home_titleHome);
+        fragment_home_titleHome.setOnTitleClickLisener(this);
+        list = (XListView) view.findViewById(R.id.myListView);
+        searchLayou = (LinearLayout) view.findViewById(R.id.searchLayou);
+        searchEt = (EditText) view.findViewById(R.id.searchEt);
+        searchEt.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                IntentTool.searchPage(getActivity(), IConstant.SEARCHCOLLEAGUE);
+            }
+        });
+//        searchEt.setOnTouchListener(Common.onTouchClearHintListener);
+//        searchEt.setOnFocusChangeListener(new Common.onFocusAutoClearHintListenerView(searchLayou));
+//        searchEt.setOnEditorActionListener(this);
+//        searchEt.addTextChangedListener(new Wather());
+        alphaIndexer = new HashMap<>();
+        adapter = new ContactListAdapter(getActivity(), alphaIndexer, IConstant.CONTACT);
+        list.setAdapter(adapter);
+        indexBar = (MyLetterListView) view.findViewById(R.id.sideBar);
+        indexBar.setOnTouchingLetterChangedListener(new LetterListViewListener());
+        initOverlay();
+//        DBFactory.getInstance().setContext(getActivity());
+        overLayouHandler = new Handler();
+        overlayThread = new OverlayThread();
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                IntentTool.startContactDetailActivity(getActivity(), contactBeanList.get(position - 1).getUid());
+            }
+        });
+
+        list.setPullLoadEnable(true);
+        list.setXListViewListener(this);
+        loadFromNet();
+        loadSunFromNet();
+        view.findViewById(R.id.departLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!StringTools.isNullOrEmpty(json)) {
+                    IntentTool.startDepartmentsSunActivity(getActivity(), json);
+                }
+            }
+        });
+        return view;
+    }
+
+    public void loadData() {
+        loadData(searchEt.getText().toString());
+    }
+
+
+    public void loadFromNet() {
+        ContactController.getInstance().getContacts(this);
+    }
+
+    public void loadSunFromNet() {
+        ContactController.getInstance().getSunContacts(new ViewNetCallBack() {
+            @Override
+            public void onConnectStart() {
+
+            }
+
+            @Override
+            public void onConnectEnd() {
+                list.stopRefresh();
+                list.stopLoadMore();
+            }
+
+            @Override
+            public void onFail(Exception e) {
+
+            }
+
+            @Override
+            public void onData(Serializable result, boolean fromNet, Object o) {
+                Logger.e("-o---" + o.toString());
+
+                contactBeanList.clear();
+                try {
+                    JSONObject jsob = new JSONObject(o.toString());
+                    JSONArray ja = jsob.getJSONArray("zmt");
+                    jsob.remove("zmt");
+                    json = jsob.toString();
+                    Logger.e("-o--ja-" + ja.length());
+                    for (int i = 0; i < ja.length(); i++) {
+                        JSONObject jo = ja.getJSONObject(i);
+                        ContactBean bean = GsonTool.jsonToEntity(jo.toString(), ContactBean.class);
+                        if (!StringTools.isNullOrEmpty(bean.getUname())) {
+                            contactBeanList.add(GsonTool.jsonToEntity(jo.toString(), ContactBean.class));
+                        }
+
+
+                    }
+                    Logger.e("-o---" + contactBeanList.size());
+
+
+                    JSONArray jaminwuye = jsob.getJSONArray("中民物业");
+                    Logger.e("-o--jaminwuye-" + jaminwuye.length());
+                    for (int i = 0; i < jaminwuye.length(); i++) {
+                        JSONObject jo = jaminwuye.getJSONObject(i);
+                        ContactBean bean = GsonTool.jsonToEntity(jo.toString(), ContactBean.class);
+                        if (!StringTools.isNullOrEmpty(bean.getUname())) {
+                            contactBeanList.add(GsonTool.jsonToEntity(jo.toString(), ContactBean.class));
+                        }
+
+
+                    }
+                    Logger.e("-o---" + contactBeanList.size());
+
+
+
+                    JSONArray jakejibu= jsob.getJSONArray("科技部");
+                    Logger.e("-o-jakejibu--" + jakejibu.length());
+                    for (int i = 0; i < jakejibu.length(); i++) {
+                        JSONObject jo = jakejibu.getJSONObject(i);
+                        ContactBean bean = GsonTool.jsonToEntity(jo.toString(), ContactBean.class);
+                        if (!StringTools.isNullOrEmpty(bean.getUname())) {
+                            contactBeanList.add(GsonTool.jsonToEntity(jo.toString(), ContactBean.class));
+                        }
+
+
+                    }
+                    Logger.e("-o---" + contactBeanList.size());
+
+
+
+                    JSONArray jarenliziyuan= jsob.getJSONArray("人力资源部");
+                    Logger.e("-o-jarenliziyuan--" + jarenliziyuan.length());
+                    for (int i = 0; i < jarenliziyuan.length(); i++) {
+                        JSONObject jo = jarenliziyuan.getJSONObject(i);
+                        ContactBean bean = GsonTool.jsonToEntity(jo.toString(), ContactBean.class);
+                        if (!StringTools.isNullOrEmpty(bean.getUname())) {
+                            contactBeanList.add(GsonTool.jsonToEntity(jo.toString(), ContactBean.class));
+                        }
+
+
+                    }
+                    Logger.e("-o---" + contactBeanList.size());
+
+                    adapter.setRes(contactBeanList);
+
+
+                } catch (Exception e) {
+//                    Logger.e(e.getLocalizedMessage(),e);
+
+                }
+
+            }
+        });
+    }
+
+
+    private void loadData(final String name) {
+        Runnable task = new Runnable() {
+            @Override
+            public void run() {
+
+                contactBeanList = ContactController.getInstance().getConstacts(name);
+                contactHandler.sendEmptyMessage(0);
+            }
+        };
+
+        Thread thread = new Thread(task);
+        thread.setDaemon(true);
+        thread.start();
+    }
+
+    private void initOverlay() {
+        LayoutInflater inflater = LayoutInflater.from(getActivity());
+        overlay = (TextView) inflater.inflate(R.layout.view_overlay, null);
+        overlay.setVisibility(View.INVISIBLE);
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_APPLICATION,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
+                        | WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                PixelFormat.TRANSLUCENT);
+        windowManager = (WindowManager) getActivity()
+                .getSystemService(Context.WINDOW_SERVICE);
+        windowManager.addView(overlay, lp);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        windowManager.removeView(overlay);
+    }
+
+    @Override
+    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+        loadData(v.getText().toString());
+        return false;
+    }
+
+    @Override
+    public void onConnectStart() {
+
+    }
+
+    @Override
+    public void onConnectEnd() {
+        list.stopRefresh();
+        list.stopLoadMore();
+
+    }
+
+
+    @Override
+    public void onFail(Exception e) {
+        loadData(searchEt.getText().toString());
+    }
+
+    @Override
+    public void onData(Serializable result, boolean b, Object o) {
+
+        new ContactDbThread(result, 0) {
+            @Override
+            public void onView() {
+
+//                loadData(searchEt.getText().toString());
+            }
+        }.execute();
+    }
+
+    private class OverlayThread implements Runnable {
+        @Override
+        public void run() {
+            overlay.setVisibility(View.GONE);
+        }
+    }
+
+    private class LetterListViewListener implements MyLetterListView.OnTouchingLetterChangedListener {
+
+        @Override
+        public void onTouchingLetterChanged(final String s) {
+            if (alphaIndexer.get(s) != null) {
+                int position = alphaIndexer.get(s);
+                list.setSelection(position);
+                overlay.setText(s);
+                overlay.setVisibility(View.VISIBLE);
+                overLayouHandler.removeCallbacks(overlayThread);
+                overLayouHandler.postDelayed(overlayThread, 1500);
+            }
+        }
+
+    }
+
+    public class Wather implements TextWatcher {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+//           new QuaryWords(s.toString()).execute();
+
+            String string = s.toString();
+//            loadData(string);
+            searchLayou.setVisibility(StringTools.isNullOrEmpty(s.toString()) ? View.VISIBLE : View.GONE);
+
+
+        }
+    }
+
+
+}

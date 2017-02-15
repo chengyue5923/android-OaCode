@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+
+        android:id="@+id/bottomLayout"
+        android:orientation="vertical"
+        android:background="#ededef"
+        android:paddingTop="1dp"
+        android:layout_height="50dp">
+        <View
+            android:id="@+id/fragment_home_secondLine_gzt"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/ivBack"
+                android:src="@drawable/back"
+
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/ivNextg"
+                android:src="@drawable/next"
+
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/ivRresh"
+                android:src="@drawable/refresh"
+
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/web_view_error" />
+    </LinearLayout>
+
+<com.idxk.mobileoa.android.ui.views.widget.ProgressWebView
+    android:layout_width="match_parent"
+    android:layout_above="@+id/bottomLayout"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/webView"
+    />
+
+
+
+
+
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/view_subwebview.xml -->

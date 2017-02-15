@@ -1,0 +1,213 @@
+package com.idxk.mobileoa.android.ui.views.adapter;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.idxk.mobileoa.R;
+import com.idxk.mobileoa.config.constant.IConstant;
+import com.idxk.mobileoa.model.bean.ContactBean;
+import com.idxk.mobileoa.utils.common.android.Common;
+import com.idxk.mobileoa.utils.common.android.IntentTool;
+import com.idxk.mobileoa.utils.common.android.Logger;
+import com.idxk.mobileoa.utils.common.java.ListUtil;
+import com.idxk.mobileoa.utils.common.java.StringTools;
+import com.idxk.mobileoa.utils.net.connect.http.file.ImageLoaderManager;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * Created by Wesley on 2015/3/12.
+ */
+public class ContactListAdapter extends BaseAdapter {
+    Context context;
+    private LayoutInflater inflater;
+    private List<ContactBean> list;
+    private HashMap<String, Integer> alphaIndexer;
+    private int type;
+    private boolean showTitle = true;
+
+    public ContactListAdapter(Context context, HashMap<String, Integer> map, int type) {
+        this.inflater = LayoutInflater.from(context);
+        this.alphaIndexer = map;
+        list = new ArrayList<>();
+        this.context = context;
+        this.type = type;
+    }
+
+
+    public void setRes(List<ContactBean> list) {
+        this.list = list;
+        for (int i = 0; i < list.size(); i++) {
+            String currentStr = list.get(i).getFirst_letter();
+            String previewStr = (i - 1) >= 0 ? list.get(i - 1)
+                    .getFirst_letter() : " ";
+            if (!previewStr.equals(currentStr)) {
+                String name = list.get(i).getFirst_letter();
+                alphaIndexer.put(name, i);
+            }
+        }
+        notifyDataSetChanged();
+    }
+
+    public void setHideTitle(boolean showTitle) {
+        this.showTitle = showTitle;
+    }
+
+    @Override
+    public int getCount() {
+        return list.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return list.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        final ViewHolder holder;
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.view_item_contact, null);
+            holder = new ViewHolder();
+            holder.alpha = (TextView) convertView.findViewById(R.id.section);
+            holder.name = (TextView) convertView.findViewById(R.id.nameTextView);
+            holder.departMent = (TextView) convertView.findViewById(R.id.departmentTextView);
+            holder.number = (TextView) convertView.findViewById(R.id.numTextView);
+            holder.phoneIcon = (ImageView) convertView.findViewById(R.id.phoneIcon);
+            holder.msgIcon = (ImageView) convertView.findViewById(R.id.msgIcon);
+            holder.contactAvatar = (ImageView) convertView.findViewById(R.id.contactAvatar);
+            holder.isChecked = (ImageView) convertView.findViewById(R.id.contact_isChecked);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+
+        ContactBean contactBean = list.get(position);
+
+        if (type == IConstant.SCOPE) {
+            holder.phoneIcon.setVisibility(View.GONE);
+            holder.msgIcon.setVisibility(View.GONE);
+            //显示复选框
+            holder.isChecked.setVisibility(View.VISIBLE);
+            holder.phoneIcon.setVisibility(View.GONE);
+            holder.msgIcon.setVisibility(View.GONE);
+            if (contactBean.isChecked) {
+                holder.isChecked.setImageResource(R.drawable.btn_check_sel);
+            } else {
+                holder.isChecked.setImageResource(R.drawable.btn_check_nor);
+            }
+
+        } else if (type == IConstant.CONTACT) {
+            holder.phoneIcon.setVisibility(View.VISIBLE);
+            holder.msgIcon.setVisibility(View.VISIBLE);
+            holder.isChecked.setVisibility(View.GONE);
+            if (contactBean.showPhone()) {
+                holder.phoneIcon.setVisibility(View.VISIBLE);
+            } else {
+                holder.phoneIcon.setVisibility(View.GONE);
+            }
+            if (contactBean.showMes()) {
+                holder.msgIcon.setVisibility(View.VISIBLE);
+            } else {
+                holder.msgIcon.setVisibility(View.GONE);
+            }
+        }
+        holder.name.setText(contactBean.getUname());
+        holder.number.setText(contactBean.getMobile());
+        if (showTitle) {
+            if (!ListUtil.isNullOrEmpty(contactBean.getDepartment())) {
+                holder.departMent.setText(contactBean.getDepartment().get(0));
+            } else {
+                holder.departMent.setText(StringTools.toTrim(contactBean.getDep()));
+            }
+        } else {
+            contactBean.setShowUserDepartMent(true);
+            if (!ListUtil.isNullOrEmpty(contactBean.getUser_department())) {
+                holder.departMent.setText(contactBean.getUser_department().get(0));
+            } else {
+                holder.departMent.setText("");
+            }
+        }
+
+
+        holder.phoneIcon.setOnClickListener(new Onclick(position));
+        Logger.e("--depart=-" + list.get(position).getDepartmentsJsonTest());
+//        Picasso.with(context).load(list.get(position).getAvatar_original()).into(holder.contactAvatar);
+        ImageLoaderManager.getInstance().disPlayImage(list.get(position).getAvatar_original(),holder.contactAvatar);
+
+        holder.msgIcon.setOnClickListener(new Onclick(position));
+        String currentStr = contactBean.getFirst_letter();
+        String previewStr = (position - 1) >= 0 ? list.get(position - 1)
+                .getFirst_letter() : " ";
+
+        if (showTitle) {
+            if (!StringTools.toTrim(previewStr).equals(StringTools.toTrim(currentStr))) {
+                holder.alpha.setVisibility(View.VISIBLE);
+                holder.alpha.setText(currentStr);
+            } else {
+                holder.alpha.setVisibility(View.GONE);
+            }
+        } else {
+            holder.alpha.setVisibility(View.GONE);
+        }
+        return convertView;
+    }
+
+    public interface ISelectedColleague {
+        void freshSelectedColleague(String uname, String uid, boolean isChecked, int position);
+    }
+
+    private class ViewHolder {
+        TextView alpha;
+        TextView name;
+        TextView departMent;
+        TextView number;
+        ImageView phoneIcon;
+        ImageView msgIcon;
+        ImageView isChecked;
+        ImageView contactAvatar;
+    }
+
+    class Onclick implements View.OnClickListener {
+        int postion;
+
+        private Onclick(int postion) {
+            this.postion = postion;
+        }
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.phoneIcon:
+
+                    if (list.get(postion).getCanCall().size() == 1) {
+                        Common.call(context, list.get(postion).getCanCall().get(0).getNum());
+                        return;
+                    }
+                    IntentTool.startSelectMobileActivity(context, list.get(postion), 0);
+                    break;
+                case R.id.msgIcon:
+                    if (list.get(postion).getmobiles().size() == 1) {
+                        Common.sendSMS("", context, list.get(postion).getmobiles().get(0).getNum());
+                        return;
+                    }
+                    IntentTool.startSelectMobileActivity(context, list.get(postion), 1);
+                    break;
+            }
+
+        }
+    }
+
+}

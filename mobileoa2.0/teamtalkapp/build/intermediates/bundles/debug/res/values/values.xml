@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_arrays.xml -->
+    <eat-comment/>
+    <string-array name="data">
+        <item>阿妹</item>
+        <item>阿郎</item>
+        <item>陈奕迅</item>
+        <item>周杰伦</item>
+        <item>曾一鸣</item>
+        <item>成龙</item>
+        <item>王力宏</item>
+        <item>汪峰</item>
+        <item>eric</item>
+        <item>王菲</item>
+        <item>那英</item>
+        <item>张伟</item>
+        <item>张学友</item>
+        <item>李德华</item>
+        <item>郑源</item>
+        <item>白水水</item>
+        <item>白天不亮</item>
+        <item>陈龙</item>
+        <item>陈丽丽</item>
+        <item>哈林</item>
+        <item>高进</item>
+        <item>高雷</item>
+        <item>阮今天</item>
+        <item>龚琳娜</item>
+        <item>苏醒</item>
+        <item>苏永康</item>
+        <item>陶喆</item>
+        <item>沙宝亮</item>
+        <item>宋冬野</item>
+        <item>宋伟</item>
+        <item>袁成杰</item>
+        <item>戚薇</item>
+        <item>齐大友</item>
+        <item>齐天大圣</item>
+        <item>品冠</item>
+        <item>吴克群</item>
+        <item>BOBO</item>
+        <item>Jobs</item>
+        <item>动力火车</item>
+        <item>伍佰</item>
+        <item>#蔡依林</item>
+        <item>$797835344$</item>
+        <item>Jack</item>
+        <item>~夏先生</item>
+    </string-array>
+    <string-array name="default_emo_phrase">
+        <item>[呵呵]</item>
+        <item>[嘻嘻]</item>
+        <item>[哈哈]</item>
+        <item>[晕]</item>
+        <item>[泪]</item>
+        <item>[馋嘴]</item>
+        <item>[抓狂]</item>
+        <item>[哼]</item>
+        <item>[可爱]</item>
+        <item>[怒]</item>
+        <item>[困]</item>
+        <item>[汗]</item>
+        <item>[睡觉]</item>
+        <item>[偷笑]</item>
+        <item>[酷]</item>
+        <item>[吃惊]</item>
+        <item>[闭嘴]</item>
+        <item>[花心]</item>
+        <item>[失望]</item>
+        <item>[生病]</item>
+        <item>[亲亲]</item>
+        <item>[右哼哼]</item>
+        <item>[嘘]</item>
+        <item>[挤眼]</item>
+        <item>[酷]</item>
+        <item>[感冒]</item>
+        <item>[做鬼脸]</item>
+        <item>[阴险]</item>
+        <item>[热吻]</item>
+        <item>[心]</item>
+        <item>[ok]</item>
+        <item>[不要]</item>
+        <item>[弱]</item>
+        <item>[good]</item>
+        <item>[拳头]</item>
+        <item>[耶]</item>
+        <item>[0]</item>
+        <item>[1]</item>
+        <item>[2]</item>
+        <item>[3]</item>
+        <item>[4]</item>
+        <item>[5]</item>
+        <item>[6]</item>
+        <item>[7]</item>
+        <item>[8]</item>
+        <item>[9]</item>
+    </string-array>
+    <string-array name="yaya_emo_phrase">
+        <item>[牙牙撒花]</item>
+        <item>[牙牙尴尬]</item>
+        <item>[牙牙大笑]</item>
+        <item>[牙牙组团]</item>
+        <item>[牙牙凄凉]</item>
+        <item>[牙牙吐血]</item>
+        <item>[牙牙花痴]</item>
+        <item>[牙牙疑问]</item>
+        <item>[牙牙爱心]</item>
+        <item>[牙牙害羞]</item>
+        <item>[牙牙牙买碟]</item>
+        <item>[牙牙亲一下]</item>
+        <item>[牙牙大哭]</item>
+        <item>[牙牙愤怒]</item>
+        <item>[牙牙挖鼻屎]</item>
+        <item>[牙牙嘻嘻]</item>
+        <item>[牙牙漂漂]</item>
+        <item>[牙牙冰冻]</item>
+        <item>[牙牙傲娇]</item>
+    </string-array>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/attrs.xml -->
+    <eat-comment/>
+    <attr name="fontPath"/>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_color.xml -->
+    <eat-comment/>
+    <color name="album_list_item_count_color">#bcbcbc</color>
+    <color name="contact_category_text_color">#858585</color>
+    <color name="contact_category_title_bk">#f1f0f6</color>
+    <color name="contact_default_bk">#dedee0</color>
+    <color name="contact_list_item_bk">#ffffff</color>
+    <color name="contact_name_color">#222222</color>
+    <color name="contact_realname_color">#aaaaaa</color>
+    <color name="contact_side_word_color">#909293</color>
+    <color name="default_bk">#ffffff</color>
+    <color name="default_black_color">#000000</color>
+    <color name="default_blue_color">#01aff4</color>
+    <color name="default_fragment_bk_color">#f2f2f2</color>
+    <color name="default_fragment_search_bk_color">#e3e4e6</color>
+    <color name="default_fragment_title_bk_color">#f4f5f7</color>
+    <color name="default_key_color">#999999</color>
+    <color name="default_light_black_color">#424242</color>
+    <color name="default_light_grey_color">#929292</color>
+    <color name="default_line_color">#cccccc</color>
+    <color name="default_title_color">#343434</color>
+    <color name="default_value_color">#333333</color>
+    <color name="emo_bk_color">#ffffffff</color>
+    <color name="group_manager_group_title">#010101</color>
+    <color name="group_manager_user_title">#666666</color>
+    <color name="half_transparent_dark">#e0000000</color>
+    <color name="half_transparent_light">#AA000000</color>
+    <color name="list_divider_color">#d1d1d1</color>
+    <color name="list_item_sel_color">#eaeaea</color>
+    <color name="listview_color">#F0F0F0</color>
+    <color name="login_hint_color">#d4d4d4</color>
+    <color name="message_body_nottext_color">#ffee4566</color>
+    <color name="message_body_text_color">#999999</color>
+    <color name="message_date">#20465A</color>
+    <color name="message_time_color">#a0a0a0</color>
+    <color name="messgae_uname_color">#ffee4566</color>
+    <color name="messgae_uname_dark_color">#000000</color>
+    <color name="panel_bk_color">#fffafafa</color>
+    <color name="pickimage_item_bg">#ffffff</color>
+    <color name="title_color">#1f5e8d</color>
+    <color name="transparent">#00000000</color>
+    <color name="txt_hint_color">#999999</color>
+    <color name="user_detail_base">#ececec</color>
+    <color name="user_portrait_bk">#20465A</color>
+    <declare-styleable name="BubbleImageView"><attr format="dimension|reference" name="bubble_arrowTop"/><attr format="dimension|reference" name="bubble_arrowWidth"/><attr format="dimension|reference" name="bubble_arrowHeight"/><attr format="dimension|reference" name="bubble_arrowOffset"/><attr format="dimension|reference" name="bubble_angle"/><attr format="enum" name="bubble_arrowLocation"><enum name="left" value="0"/><enum name="right" value="1"/></attr></declare-styleable>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="album_list_item_name_size">15sp</dimen>
+    <dimen name="album_top_cancel_size">14sp</dimen>
+    <dimen name="bottom_bar_default_height">50dp</dimen>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_ptr_dimens.xml -->
+    <eat-comment/>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_dimens.xml -->
+    <eat-comment/>
+    <dimen name="message_item_popup_height">50dp</dimen>
+    <dimen name="message_item_popup_width_double_long">150dp</dimen>
+    <dimen name="message_item_popup_width_double_short">140dp</dimen>
+    <dimen name="message_item_popup_width_single_long">90dp</dimen>
+    <dimen name="message_item_popup_width_single_short">60dp</dimen>
+    <dimen name="top_bar_btn_minWidth">56dp</dimen>
+    <dimen name="top_bar_btn_right_margin">12dp</dimen>
+    <dimen name="top_bar_default_height">45dp</dimen>
+    <dimen name="top_bar_icon_vertical_padding">8dp</dimen>
+    <dimen name="top_title_size">18sp</dimen>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="action_forgot_password">Recover lost password</string>
+    <string name="action_kickout">用户在其他客户端登录</string>
+    <string name="action_sign_in_register"><b>登 录</b></string>
+    <string name="action_sign_in_short">进入</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="app_name">TeamTalk</string>
+    <string name="audio_in_call">已经为您切换到听筒模式</string>
+    <string name="audio_in_speeker">已经为您切换到扬声器模式</string>
+    <string name="audio_recorded_so_short">录音时间太短，请重新录制</string>
+    <string name="block_chat">不能对话</string>
+    <string name="call">呼叫</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="call_mode">听筒模式</string>
+    <string name="cancel">取消</string>
+    <string name="chat">发信息</string>
+    <string name="chat_detail">聊天详情</string>
+    <string name="chat_failed_search">未搜索到匹配的结果</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="chat_title">TeamTalk</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="choose_contact">选择联系人</string>
+    <string name="confirm">确定</string>
+    <string name="connecting">正在连接...</string>
+    <string name="contact_all">全部</string>
+    <string name="contact_department">部门</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="contact_name">最近联系人</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="copy">复制</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="default_emo">默认表情</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="desc_avatar">头像</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="disconnected">连接已断开</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="disconnected_by_server">"服务器已断开连接！"</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="error_incorrect_user">请检查用户名密码是否正确</string>
+    <string name="error_invalid_email">用户名不合法</string>
+    <string name="error_invalid_password">亲，密码太短了</string>
+    <string name="error_name_required">请输入用户名</string>
+    <string name="error_pwd_required">请输入密码</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="exit">退出</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="get_recent_contact_failed">当前联系人加载失败</string>
+    <string name="get_unread_msg_count_failed">获取未读消息计数失败</string>
+    <string name="get_user_info_failed">获取用户信息失败</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="goods_detail_title">我正在看:</string>
+    <string name="goods_now_price_prefix">￥</string>
+    <string name="goods_old_price_prefix">￥</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="group_name_tip">群聊名称</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="history_divider_text">以上是历史信息</string>
+    <string name="i_know">我知道了</string>
+    <string name="im_service_disconnected">无法连接到后台服务</string>
+    <string name="image_cannot_found">图片路径不存在，请选择其它图片！</string>
+    <string name="image_download_failed">下载文件失败</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="image_path_unavaluable">图片路径无效</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="invalid_account">登录失败,请重试</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="invalid_detail_url">无效的详情链接,不能跳转哦～</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="invalid_network">请检查网络是否正常！</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="invalid_order_url">无效的订单链接,不能跳转哦～</string>
+    <string name="kick_off">该账号在其他设备登陆，您已被迫下线!</string>
+    <string name="kick_tip">您已经被踢下线</string>
+    <string name="link_is_connecting">正在建立连接,请稍后...</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="load_contacts_failed">数据请求失败,请重试</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="loadding_target_info">正在获取对方信息...</string>
+    <string name="loading">加载中…</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="loading_contacts">加载中...</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="login_failed">登陆失败,请重试</string>
+    <string name="login_progress_signing_in">正在登录…</string>
+    <string name="login_timeout">登陆超时,请重试</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_main_page.xml -->
+    <eat-comment/>
+    <string name="main_chat">聊天</string>
+    <string name="main_contact">通讯录</string>
+    <string name="main_innernet">发现</string>
+    <string name="main_me_tab">我的</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="menu_search">搜索</string>
+    <string name="menu_undo">后退</string>
+    <string name="menu_users">用户</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="message_image_desc">Message Image</string>
+    <string name="message_null">不能发送空内容哦！</string>
+    <string name="message_send_failed">请检查网络</string>
+    <string name="need_choose_images">请选择图片～</string>
+    <string name="network_has_connected">网络已正常</string>
+    <string name="network_has_disconnected">网络已经断开</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="network_was_disconnected">连接已经断开</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="no_available_dir">没用找到存储目录</string>
+    <string name="no_gallery">没有找到相册</string>
+    <string name="no_group_member">你可能已经不在该群中了!</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="no_recent_contact">最近还没有人联系过你哦</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="no_sdcard">没有SD卡</string>
+    <string name="not_found_album">没有找到可用的相册！</string>
+    <string name="notfound_audio_file">该语音文件已丢失</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="notify_setting">通知设置</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_main_page.xml -->
+    <eat-comment/>
+    <string name="page_me">我</string>
+    <string name="page_setting">设置</string>
+    <string name="page_user_detail">详细资料</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="photo_pop_pick_photo">从相册选择</string>
+    <string name="photo_pop_take_photo">拍照</string>
+    <string name="pick_photo_description">pick photo</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="preview">预览</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="prompt_name">用户名</string>
+    <string name="prompt_password">密码</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_pull_refresh_strings.xml -->
+    <eat-comment/>
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_last_refresh">上次更新：</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新~</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新...</string>
+    <string name="pull_to_refresh_release_label">释放立即刷新~</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="reconnect">重连</string>
+    <string name="refresh">刷新</string>
+    <string name="refresh_over">刷新完成</string>
+    <string name="release_to_send_voice">松开 结束</string>
+    <string name="request_custom_service_failed">请求客服失败</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="request_login_faild">请求登陆消息服务器失败</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_contact.xml -->
+    <eat-comment/>
+    <string name="request_unread_msg_faild">请求未读消息失败</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="requesting">正在获取信息...</string>
+    <string name="resend">重发</string>
+    <string name="save">保存</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="save_image">保存图片到手机</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="sdcard_unavaluable">请检查存储卡是否可用</string>
+    <string name="send">发送</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="send_good_url_btn_text">发送链接</string>
+    <string name="send_link">发送链接</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="send_message">发表</string>
+    <string name="speaker_mode">扬声器模式</string>
+    <string name="switch_login_server">切换登陆服务器</string>
+    <string name="switch_login_server_title">输入登陆服务器地址</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="take_camera_btn_text">拍照</string>
+    <string name="take_photo_btn_text">照片</string>
+    <string name="take_photo_description">take photo</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="thumb_remove">清理图片缓存</string>
+    <string name="thumb_remove_finish">清理完成</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="tip_for_voice_forward">按住 说话</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_login.xml -->
+    <eat-comment/>
+    <string name="title_activity_login">登录IM</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings.xml -->
+    <eat-comment/>
+    <string name="title_activity_pick_photo">PickPhotoActivity</string>
+    <string name="title_activity_preview">PreviewActivity</string>
+    <string name="top_left_back">返回</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_strings_activity_message.xml -->
+    <eat-comment/>
+    <string name="unavailable_image_file">该文件已损坏</string>
+    <string name="unavailable_server">服务器开小差，请稍后重试～</string>
+    <string name="write_audio_file_failed">录音文件写入失败</string>
+    <string name="yaya_emo">牙牙表情</string>
+    <!-- From: file:/D:/oa/mobileoa2.0/teamtalkapp/src/main/res/values/tt_styles.xml -->
+    <eat-comment/>
+    <style name="AlbumScale">
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置全屏显示 -->
+        <item name="android:windowFrame">@null</item>
+    </style>
+    <style name="AnimAlbum" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/tt_album_enter</item>
+        <item name="android:windowExitAnimation">@anim/tt_album_exit</item>
+    </style>
+    <style name="AnimImage" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/tt_image_enter</item>
+        <item name="android:windowExitAnimation">@anim/tt_image_exit</item>
+    </style>
+    <style name="AnimSpeeker" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/tt_speeker_in</item>
+        <item name="android:windowExitAnimation">@anim/tt_speeker_out</item>
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="ImageScale" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimImage</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowFullscreen">true</item>
+        <!-- 设置全屏显示 -->
+        <item name="android:windowFrame">@null</item>
+    </style>
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+    <style name="SoundVolumeStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="displayImage" parent="android:Theme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <style name="imDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/tt_dialog_bg</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="imDialogText">
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="imDialogText.SubTitle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff424242</item>
+    </style>
+    <style name="imDialogText.Title">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">#fff6577a</item>
+    </style>
+    <style name="loadingImageDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 无边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 没有标题 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 背景是否半透明 -->
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- 动画样式 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 背景是否模糊 -->
+    </style>
+    <style name="phoneNumDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 无边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 没有标题 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮在activity之上 -->
+    </style>
+</resources>

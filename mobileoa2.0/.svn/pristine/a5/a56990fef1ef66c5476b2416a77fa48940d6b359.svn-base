@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edit_text_height">44dp</dimen>
+
+    <dimen name="view_title_hight">50dp</dimen>
+    <!--常用边距设为10dp-->
+    <dimen name="common_padding">15dp</dimen>
+
+    <!--文字图片之间间距-->
+    <dimen name="common_word_padding">5dp</dimen>
+
+    <!--首頁item height-->
+    <dimen name="home_item_height">66dp</dimen>
+
+    <!--标题栏边距-->
+    <dimen name="title_common_padding">5dp</dimen>
+    <!--常用按钮长度-->
+    <dimen name="button_common_length">50dp</dimen>
+    <!--  个人页面 主页面的 左右的间距-->
+    <dimen name="person_main_paddingLR">8dp</dimen>
+
+    <!--微博详情回复栏高度-->
+    <dimen name="weiBo_details_replyHeight">60dp</dimen>
+
+    <!-- 头像的宽和高 -->
+    <dimen name="person_main_imageWH">64dp</dimen>
+
+    <!--添加图片的宽度高度-->
+    <dimen name="add_pic_height">80dp</dimen>
+
+    <dimen name="person_main_itemH">40dp</dimen>
+
+    <dimen name="person_infor_barnerH">120dp</dimen>
+    <dimen name="person_infor_barner_PaddingLR">20dp</dimen>
+    <dimen name="person_infor_barner_PaddingTB">10dp</dimen>
+
+    <!-- 个人主页面里面 自定义tab的高度           -->
+    <dimen name="person_infor_tabH">40dp</dimen>
+
+    <dimen name="login_edit_padding">25dp</dimen>
+
+
+    <dimen name="person_infor_layout_item_height">60dp</dimen>
+    <dimen name="person_infor_layout_item_paddingleft">19dp</dimen>
+    <dimen name="person_infor_layout_item_paddingRight">16dp</dimen>
+
+    <!-- 修改密码界面 editText高度 -->
+    <dimen name="changePassword_edittext_height">46dp</dimen>
+    <dimen name="changePassword_edittext_marginbottom">25dp</dimen>
+
+
+    <dimen name="frehs_lv_item_pading_top">5dp</dimen>
+    <dimen name="frehs_lv_item_pading_LR">5dp</dimen>
+    <dimen name="frehs_lv_item_bottom_Height">37dp</dimen>
+    <dimen name="frehs_lv_item_iv_WH">40dp</dimen>
+
+    <dimen name="fifteendp">15dp</dimen>
+    <dimen name="fiftysix">74dp</dimen>
+    <dimen name="mian_icon_wh">52dp</dimen>
+    <dimen name="mian_icon1_wh">45dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+    <dimen name="twentydp">20dp</dimen>
+    <dimen name="fivedp">5dp</dimen>
+    <dimen name="twelvedp">12dp</dimen>
+    <dimen name="sevendp">7dp</dimen>
+    <dimen name="eightDp">8dp</dimen>
+
+</resources>

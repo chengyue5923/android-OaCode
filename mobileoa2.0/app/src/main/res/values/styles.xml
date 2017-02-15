@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="comsoft_Listview" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/transparence</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:cacheColorHint">#00000000</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="TitleTheme">
+        <item name="android:background">@drawable/title_bg_icon</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+    <declare-styleable name="toolBar">
+        <attr name="mToolBar_title" format="string" />
+        <attr name="mToolBar_rightText" format="string" />
+        <attr name="mToolBar_background" format="reference" />
+        <attr name="mToolBar_titleColor" format="reference" />
+        <attr name="mToolBar_backIv" format="reference" />
+        <attr name="mToolBar_showBack" format="boolean" />
+        <attr name="mToolBar_rightImage" format="reference" />
+        <attr name="mToolBar_showRight" format="boolean" />
+        <attr name="mToolBar_showRightText" format="boolean" />
+
+    </declare-styleable>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        Customize your theme here.
+        <!--<item name="colorPrimary">@color/blue</item>-->
+        <!--<item name="colorPrimaryDark">@color/blue</item>-->
+        <!--<item name="colorAccent">@color/blue</item>-->
+        <item name="android:windowBackground">@color/white</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!--<item name="android:windowActionBar">false</item>-->
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="writeReplyTheme">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@color/transparence</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="StyledIndicators" parent="@android:style/Theme.Light">
+
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomTabPageIndicator">
+        <item name="android:background">@drawable/tab_indicator</item>
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:dividerPadding">8dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+        <item name="android:fadingEdgeLength">8dp</item>
+    </style>
+
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+        <item name="android:textColor">@drawable/selector_tabtext</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <!-- 设置自定义布局的背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+
+    <style name="person_infor_layout_item">
+        <item name="android:height">@dimen/person_infor_layout_item_height</item>
+        <item name="android:paddingLeft">@dimen/person_infor_layout_item_paddingleft</item>
+        <item name="android:paddingRight">@dimen/person_infor_layout_item_paddingRight</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginBottom">1px</item>
+    </style>
+
+    <style name="changePassword_editText_item">
+        <item name="android:height">@dimen/changePassword_edittext_height</item>
+        <item name="android:paddingLeft">@dimen/changePassword_edittext_marginbottom</item>
+
+        <item name="android:background">@drawable/changepsweditbg</item>
+        <item name="android:layout_marginBottom">@dimen/changePassword_edittext_marginbottom</item>
+    </style>
+
+    <style name="person_infor_leftText">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="person_infor_valueText">
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+
+    <!-- 关于刷新列表的 下面的tv 样式的 修改-->
+    <style name="fresh_lv_item_bottom_tv">
+        <item name="android:textColor">#cccccc</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="fresh_lv_item_nomoal_tv">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="fresh_lv_item_filter_left_tv">
+
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#e3eaf0</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+
+    </style>
+
+    <style name="activity_dialog">
+
+
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否显示title -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <!-- 背景是否模糊显示 -->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+
+    <style name="contact_detail_key">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#a0a0a2</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="contact_detail_value">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:layout_centerVertical">true</item>
+
+    </style>
+
+</resources>

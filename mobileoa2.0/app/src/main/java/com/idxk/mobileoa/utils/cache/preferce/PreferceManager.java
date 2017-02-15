@@ -1,0 +1,145 @@
+/**
+ *
+ */
+package com.idxk.mobileoa.utils.cache.preferce;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+
+import com.idxk.mobileoa.android.application.MobileApplication;
+
+/**
+ * @author linxi
+ * @since preferce管理类  这个是个单利类 可压抑用系统的路径 data/下的SYSTEM_CACHE 配置文件 也可以继续拧自己简历配置文件
+ */
+public class PreferceManager {
+    private static final String SYSTEM_CACHE = "SYSTEM_CACHE";
+    private static PreferceManager instance;
+
+    private PreferceManager() {
+    }
+
+    public static PreferceManager getInsance() {
+        if (instance == null) {
+            instance = new PreferceManager();
+        }
+        return instance;
+    }
+
+
+    /**
+     * 用sdk的缓存路径  SYSTEM_CACHE 文件中
+     *
+     * @param value   需要储存的value
+     * @param key     需要 储存的key
+     * @param context android 上面的上下文
+     */
+    public void saveValueBYkey(String key, String value, Context context) {
+
+        SharedPreferences preferences = context.getSharedPreferences(
+                SYSTEM_CACHE, Context.MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+    /**
+     * 用sdk的缓存路径  SYSTEM_CACHE 文件中
+     *
+     * @param value   需要储存的value
+     * @param key     需要 储存的key
+     */
+    public void saveValueBYkey(String key, String value) {
+
+        SharedPreferences preferences = MobileApplication.getInstance().getSharedPreferences(
+                SYSTEM_CACHE, Context.MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    /**
+     * 清除sdk SYSTEM_CACHE 中数据
+     *
+     * @param c
+     */
+    public void clearTable(Context c) {
+        SharedPreferences preferences = c.getSharedPreferences(
+                SYSTEM_CACHE, Context.MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+    /**
+     * 取值 SYSTEM_CACHE  中的value
+     *
+     * @param context 上下文
+     * @param key
+     * @return value
+     */
+    public String getValueBYkey(Context context, String key) {
+        SharedPreferences preferences = context.getSharedPreferences(
+                SYSTEM_CACHE, Context.MODE_PRIVATE);
+        String value = preferences.getString(key, "");
+        return value;
+    }
+    /**
+     * 取值 SYSTEM_CACHE  中的value
+     *
+     * @param key
+     * @return value
+     */
+    public String getValueBYkey( String key) {
+        SharedPreferences preferences =  MobileApplication.getInstance().getSharedPreferences(
+                SYSTEM_CACHE, Context.MODE_PRIVATE);
+        String value = preferences.getString(key, "");
+        return value;
+    }
+
+    /**
+     * 用sdk的缓存路径  自定义文件名称 文件中
+     *
+     * @param value     需要储存的value
+     * @param key       需要 储存的key
+     * @param context   android 上面的上下文
+     * @param tableName 需要 创建的表名称
+     */
+    public void saveValueBYkeyFromTable(String value, String key, Context context, String tableName) {
+        SharedPreferences preferences = context.getSharedPreferences(
+                tableName, Context.MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.putString(key, value);
+        editor.commit();
+    }
+
+    /**
+     * 清除sdk 自定义文件名称 中数据
+     *
+     * @param tableName 表名称
+     * @param c
+     */
+    public void clearTableFromTable(Context c, String tableName) {
+        SharedPreferences preferences = c.getSharedPreferences(
+                tableName, Context.MODE_PRIVATE);
+        Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+    }
+
+    /**
+     * 取值 自定义文件名称  中的value
+     *
+     * @param context   上下文
+     * @param key
+     * @param tableName 表名称
+     * @return value
+     */
+    public String getValueBYkeyFromTable(Context context, String key, String tableName) {
+        SharedPreferences preferences = context.getSharedPreferences(
+                tableName, Context.MODE_PRIVATE);
+        String value = preferences.getString(key, "");
+        return value;
+    }
+
+}

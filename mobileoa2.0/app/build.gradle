@@ -1,0 +1,104 @@
+apply plugin: 'com.android.application'
+
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("GMT+8:00"))
+}
+
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        applicationId "com.idxk.mobileoa"
+        minSdkVersion 14
+        targetSdkVersion 22
+        multiDexEnabled true
+        versionName "2.0.3"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    android {
+        packagingOptions {
+            exclude 'AndroidManifest.xml'
+        }
+    }
+    productFlavors {
+        developVersion {
+            manifestPlaceholders = [debug_value: "true", testToastShow_value: "false", writeLog_value: "true", environment_value: "url"]
+        } //开发自己的 的测试包 需要将debug true  toast true  write true environment url
+//        betaVersion {
+//            manifestPlaceholders = [debug_value: "true", testToastShow_value: "false", writeLog_value: "true", environment_value: "url1"]
+//        }// 生产环境的版本 但是 是测试的 debug true  toast false  write true environment url2
+//        onLineVersion {
+//            manifestPlaceholders = [debug_value: "false", testToastShow_value: "false", writeLog_value: "false", environment_value: "url2"]
+//        }// 生产环境的版本FF 但是 是测试的 debug false  toast false  write true environment url2
+
+    }
+
+
+
+    signingConfigs {
+        release {
+            storeFile file("mobileoa.jks")
+            storePassword "zhongmintouoa"
+            keyAlias "zhongmintouoa"
+            keyPassword "zhongmintouoa"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            proguardFile 'proguard-project.txt'
+            signingConfig signingConfigs.release
+            jniDebuggable false
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    System.out.print(outputFile)
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为boohee_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "mobileoa_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        System.print(variant.productFlavors[0])
+                        output.outputFile = new File(outputFile.parent + "/package", fileName)
+                    }
+                }
+            }
+        }
+
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    dexOptions {
+        incremental false
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.android.support:support-v4:22.2.0'
+    compile files('lib/umeng-update-v2.6.0.1.jar')
+    compile files('lib/httpmime-4.2.5.jar')
+    compile files('lib/jpush-sdk-release1.7.4.jar')
+    compile files('lib/pushservice-4.5.1.8.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile project(':teamtalkapp')
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+}

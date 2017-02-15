@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="debug">false</string>
+    <string name="testToastShow">false</string>
+    <string name="writeLog">false</string>
+</resources>

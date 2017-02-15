@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="environment">url2</string>
+    <string name="url1">http://oa.cm-inv.com/oa2/index.php?</string>
+    <!--登录接口89暂时不通，以后调试用89-->
+    <string name="url2">http://oa.cm-inv.com/index.php?</string>
+    <string name="url">http://115.28.7.89/zmtoa/index.php?</string>
+    <string name="urlSever">http://115.28.7.89/zmtoa/</string>
+    <string name="urlSeverNormal">http://oa.cm-inv.com/</string>
+    <string name="urlSeverBeta">http://oa.cm-inv.com/oa2/</string>
+    <string name="zhongMinTouUrl">http://cmnote-api.cm-inv.com/ota.htm</string>
+    <string name="gztUrl">http://oa.cm-inv.com/salary.php</string>
+
+
+    <string name="login1">123.56.235.2</string>
+    <string name="login2">123.56.235.2</string>
+
+
+    <string name="AVATAR_URL_PREFIX">http://123.56.235.2:8600/</string>
+    <string name="DOWNLOAD_IMAGE_URL_REPFIX">http://123.56.235.2:8600/</string>
+    <string name="UPLOAD_IMAGE_URL_PREFIX">http://123.56.235.2:8600/</string>
+
+
+
+</resources>
+

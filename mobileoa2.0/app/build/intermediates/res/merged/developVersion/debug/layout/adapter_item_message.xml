@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fresh_item_bg">
+    <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+            android:layout_width="@dimen/frehs_lv_item_iv_WH"
+            android:layout_height="@dimen/frehs_lv_item_iv_WH"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="@dimen/twelvedp"
+            android:id="@+id/personPhoto"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/personPhoto"
+              android:textSize="15sp"
+              android:textColor="#333333"
+              android:layout_marginTop="@dimen/twelvedp"
+              android:text="@string/app_name"
+              android:id="@+id/personName"/>
+    <TextView android:layout_width="250dp"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/personName"
+              android:id="@+id/personContent"
+              android:textSize="13sp"
+              android:textColor="#cccccc"
+              android:background="@drawable/reply_bg"
+              android:paddingTop="10dp"
+              android:paddingBottom="5dp"
+              android:singleLine="true"
+              android:paddingLeft="5dp"
+              android:paddingRight="5dp"
+              android:layout_toRightOf="@id/personPhoto"
+              android:text="@string/app_name"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:id="@+id/personTime"
+              android:textSize="13sp"
+              android:paddingTop="10dp"
+              android:textColor="#999999"
+              android:layout_marginRight="@dimen/tendp"
+              android:layout_alignParentRight="true"
+              android:paddingRight="10dp"
+              android:paddingBottom="10dp"
+              android:layout_below="@id/personContent"/>
+    <!--<LinearLayout android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/personTime">-->
+    <!--<TextView android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:id="@+id/personReply"-->
+    <!--android:text="@string/person_reply"/>-->
+    <!--<TextView android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:id="@+id/personPraise"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:text="@string/person_praise"/>-->
+    <!--<TextView android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:id="@+id/lookupDetails"-->
+    <!--android:gravity="center"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:text="@string/lookup_details"/>-->
+    <!--</LinearLayout>-->
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_below="@id/personTime"
+               android:src="#f1f1f1"
+               android:id="@+id/dividerLine"
+               android:layout_height="1px"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="@dimen/frehs_lv_item_bottom_Height"
+                  android:weightSum="3"
+                  android:visibility="gone"
+                  android:gravity="center"
+                  android:layout_below="@id/dividerLine">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:id="@+id/messageReceivedReply"
+                      android:layout_gravity="center"
+                      android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/tendp"
+                       android:src="@drawable/replay"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/personReply"
+                      style="@style/fresh_lv_item_bottom_tv"
+                      android:text="@string/reply"/>
+        </LinearLayout>
+
+
+        <ImageView android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:src="#f1f1f1"
+                   android:paddingTop="7dp"
+                   android:paddingBottom="7dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_gravity="center"
+                      android:id="@+id/messageReceivedPraise"
+                      android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/tendp"
+                       android:id="@+id/messageReceivedPraiseZan"
+                       android:src="@drawable/zan"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/personPraise"
+                      android:gravity="center"
+                      style="@style/fresh_lv_item_bottom_tv"
+                      android:text="@string/praise"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_gravity="center"
+                      android:id="@+id/messageDeleteLayout"
+                      android:visibility="gone"
+                      android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/tendp"
+                       android:src="@drawable/delete_fresh"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/messageDelete"
+                      android:gravity="center"
+                      style="@style/fresh_lv_item_bottom_tv"
+                      android:text="@string/delete"/>
+        </LinearLayout>
+
+        <ImageView android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:src="#f1f1f1"
+                   android:paddingTop="7dp"
+                   android:paddingBottom="7dp"/>
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:layout_gravity="center"
+                      android:id="@+id/messageLookupDetailsLayout"
+                      android:layout_weight="1">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/tendp"
+                       android:src="@drawable/details"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/lookupDetails"
+                      style="@style/fresh_lv_item_bottom_tv"
+                      android:text="@string/lookup_details"
+                      android:gravity="center"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/adapter_item_message.xml -->

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/values-1280x720/demin.xml -->
+    <eat-comment/>
+    <dimen name="common_padding">15dp</dimen>
+    <dimen name="fifteendp">15dp</dimen>
+    <dimen name="fiftysix">74dp</dimen>
+    <dimen name="tendp">10dp</dimen>
+    <dimen name="title_common_padding">5dp</dimen>
+    <dimen name="twentydp">20dp</dimen>
+</resources>

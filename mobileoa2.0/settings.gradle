@@ -1,0 +1,1 @@
+include ':app', ':mgimlibs', ':baseframwork', ':baseplatform',':baseview', ':teamtalkapp', ':daogenerator'

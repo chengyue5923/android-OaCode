@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_title_hight"
+    android:background="@color/title_color">
+
+    <TextView
+        android:id="@+id/titleCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_title_hight"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/title_selector"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:text="@string/cancel"
+        android:textColor="#e9eef3"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/centerTitleLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/title_selector"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/title_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/title_common_padding"
+            android:gravity="center"
+            android:textColor="#e9eef3"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:id="@+id/titleCenterIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trigon"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleSend"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/view_title_hight"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/title_selector"
+        android:gravity="center"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:text="@string/fresh_send"
+        android:textColor="#e9eef3"
+        android:textSize="15sp" />
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/title_fresh_layout.xml -->

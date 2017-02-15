@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/workAlarmBackgroundColor"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:rightImage="@drawable/magnifying"
+        main_title:showLeft="true"
+        main_title:showRight="false"
+        main_title:titleCenter="@string/activity_workalarm_ireceived"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+    <ListView
+        android:id="@+id/messageReceivedListView"
+        style="@style/comsoft_Listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/title_common_padding"
+        android:layout_marginRight="@dimen/title_common_padding"
+        android:layout_marginTop="@dimen/title_common_padding"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="@dimen/title_common_padding"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"></ListView>
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_message_received.xml -->

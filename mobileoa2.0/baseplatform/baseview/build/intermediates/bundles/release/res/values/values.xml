@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="color_blue">#01beff</color>
+    <color name="color_pressed">#9c000000</color>
+    <color name="gray">#aaaaaa</color>
+    <color name="green">#00FF00</color>
+    <color name="light_blue">#6593cb</color>
+    <color name="mainTitle">#f2595b</color>
+    <color name="thumbColor">#66aaaaaa</color>
+    <color name="transparence">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <declare-styleable name="CircleImageView"><attr format="dimension" name="border_width"/><attr format="color" name="border_color"/></declare-styleable>
+    <declare-styleable name="SlidingMenu"><attr format="integer" name="rightPadding"/></declare-styleable>
+    <declare-styleable name="UIButton"><attr format="color" name="color_pressed"/><attr format="color" name="color_unpressed"/><attr format="color" name="ripple_color"/><attr format="integer" name="ripple_alpha"/><attr format="integer" name="ripple_duration"/><attr format="integer" name="alpha_pressed"/><attr format="dimension" name="ui_radius"/><attr format="enum" name="shape_type">
+            <enum name="round" value="0"/>
+            <enum name="rectangle" value="1"/>
+        </attr></declare-styleable>
+    <drawable name="black">#000000</drawable>
+    <string name="head">head</string>
+    <string name="load_fail">Failed to load</string>
+    <string name="load_succeed">Load successfully</string>
+    <string name="loading">loading...</string>
+    <string name="mi_bottom">and need more steps before using.</string>
+    <string name="mi_top">Your mobile phone is XIAOMI</string>
+    <string name="pullUp_to_load">Pull up to load more</string>
+    <string name="pull_to_refresh">Pull down refresh</string>
+    <string name="pullup_to_load">Pull up load more</string>
+    <string name="refresh_fail">refresh failed</string>
+    <string name="refresh_succeed">Refresh success</string>
+    <string name="refreshing">Refreshing...</string>
+    <string name="release_to_load">Release immediate loading</string>
+    <string name="release_to_refresh">Release immediate refresh</string>
+    <string name="xlistview_footer_hint_normal">more</string>
+    <string name="xlistview_footer_hint_ready">more</string>
+    <string name="xlistview_header_hint_loading">loading...</string>
+    <string name="xlistview_header_hint_normal">refresh</string>
+    <string name="xlistview_header_hint_ready">refresh</string>
+    <string name="xlistview_header_last_time">last refresh time:</string>
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <!-- 设置自定义布局的背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

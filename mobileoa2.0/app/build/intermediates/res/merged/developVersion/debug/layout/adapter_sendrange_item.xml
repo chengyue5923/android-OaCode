@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ffffff">
+    <TextView android:layout_width="match_parent"
+              android:paddingTop="15dp"
+              android:paddingBottom="15dp"
+              android:layout_height="wrap_content"
+              android:id="@+id/title"
+              android:textSize="16sp"
+              android:paddingLeft="15dp"
+              android:background="#f0eff5"
+              android:textColor="@color/black"
+              android:visibility="gone"
+              android:text="1231"/>
+
+<TextView android:layout_width="wrap_content"
+          android:paddingTop="15dp"
+          android:paddingBottom="15dp"
+          android:layout_height="wrap_content"
+          android:id="@+id/item"
+          android:textSize="16sp"
+          android:paddingLeft="15dp"
+          android:textColor="@color/black"
+          android:text="1231"/>
+
+
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/adapter_sendrange_item.xml -->

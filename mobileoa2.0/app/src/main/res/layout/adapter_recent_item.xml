@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/tendp"
+               android:id="@+id/notChecked"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/btn_check_nor"/>
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_margin="@dimen/tendp"
+               android:id="@+id/isChecked"
+               android:visibility="gone"
+               android:layout_gravity="center_vertical"
+               android:src="@drawable/btn_check_sel"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/recentName"
+              android:layout_margin="@dimen/tendp"
+              android:text="@string/app_name"/>
+</LinearLayout>

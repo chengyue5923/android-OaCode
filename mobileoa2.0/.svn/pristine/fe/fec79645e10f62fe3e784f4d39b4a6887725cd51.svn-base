@@ -1,0 +1,3 @@
+聊天集成入口
+MyFragment.java
+((HomeNewSunActivity) getActivity()).startImLogin(info.getLogin());

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/half_transparence">
+
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:background="#ededed"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true">
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="1px"
+                   android:src="#919191"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="10dp"
+                      android:paddingRight="10dp"
+                      android:paddingBottom="30dp">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:text="请选择获取方式"
+                      android:textSize="15sp"
+                      android:textColor="#666666"
+                      android:gravity="center"
+                      android:id="@+id/titleTv"
+                      />
+
+            <Button android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/camer_bt_bg"
+                android:layout_marginBottom="13dp"
+                android:id="@+id/showImageBt"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:text="查看图片"
+                android:textColor="@color/black"
+                />
+            <Button android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/camer_bt_bg"
+                    android:layout_marginBottom="13dp"
+                    android:onClick="caramClick"
+                    android:textSize="18sp"
+                    android:text="拍照"
+                    android:textColor="@color/black"
+                    />
+
+            <Button android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/camer_bt_bg"
+                    android:layout_marginBottom="13dp"
+                    android:onClick="albumClick"
+                    android:textSize="18sp"
+                    android:text="相册"
+                    android:textColor="@color/black"
+                    />
+
+            <Button android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/camer_bt_cancle_bg"
+                    android:layout_marginBottom="13dp"
+                    android:onClick="cancleClick"
+                    android:textSize="18sp"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

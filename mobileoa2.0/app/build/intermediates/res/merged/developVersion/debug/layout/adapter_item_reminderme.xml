@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fresh_item_bg">
+    <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+            android:layout_width="@dimen/frehs_lv_item_iv_WH"
+            android:layout_height="@dimen/frehs_lv_item_iv_WH"
+            android:layout_margin="@dimen/tendp"
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/personPhoto"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/tendp"
+              android:layout_toRightOf="@id/personPhoto"
+              android:text="@string/app_name"
+              android:textColor="#333333"
+              android:textSize="17sp"
+              android:id="@+id/personName"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@id/personPhoto"
+              android:layout_marginLeft="@dimen/tendp"
+              style="@style/fresh_lv_item_nomoal_tv"
+              android:layout_marginTop="@dimen/twelvedp"
+              android:id="@+id/personContent"
+              android:text="@string/app_name"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/app_name"
+              android:textSize="15sp"
+              android:textColor="#666666"
+              android:id="@+id/personTime"
+              android:layout_below="@id/personName"
+              android:layout_toRightOf="@id/personPhoto"
+            />
+
+    <ImageView android:layout_width="match_parent"
+               android:layout_below="@id/personContent"
+               android:src="#d9dadc"
+               android:layout_marginTop="@dimen/fifteendp"
+               android:id="@+id/dividerLine"
+               android:layout_height="1px"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="@dimen/frehs_lv_item_bottom_Height"
+                  android:weightSum="2"
+                  android:layout_below="@id/dividerLine">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:id="@+id/reminderMeReplyLayout"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:layout_gravity="center">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/tendp"
+                       android:src="@drawable/replay"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/fresh_lv_item_bottom_tv"
+                      android:id="@+id/personReply"
+                    />
+        </LinearLayout>
+
+
+        <ImageView android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:src="#f1f1f1"
+                   android:paddingTop="7dp"
+                   android:paddingBottom="7dp"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:gravity="center"
+                      android:id="@+id/reminderMePraiseLayout"
+                      android:layout_gravity="center">
+            <ImageView android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="@dimen/tendp"
+                       android:id="@+id/reminderMeZanPic"
+                       android:src="@drawable/zan"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/fresh_lv_item_bottom_tv"
+                      android:id="@+id/personPraise"
+                      android:text="@string/praise"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/adapter_item_reminderme.xml -->

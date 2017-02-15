@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fiftysix"
+    android:background="@color/workAlarmLayoutBackColor"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/personPhoto"
+        android:layout_width="@dimen/mian_icon_wh"
+        android:layout_height="@dimen/mian_icon_wh"
+        android:layout_marginLeft="@dimen/fifteendp"
+        android:layout_marginStart="@dimen/fifteendp"
+        android:src="@drawable/tt_default_user_portrait_corner" />
+
+    <TextView
+        android:id="@+id/personName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_toEndOf="@id/personPhoto"
+        android:layout_toRightOf="@id/personPhoto"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personName"
+        android:layout_marginLeft="@dimen/tendp"
+        android:layout_marginStart="@dimen/tendp"
+        android:layout_toEndOf="@id/personPhoto"
+        android:layout_toRightOf="@id/personPhoto"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/chatTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/fifteendp"
+        android:layout_marginRight="@dimen/fifteendp"
+        android:textColor="#999999"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/unReadMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chatTime"
+        android:layout_marginEnd="@dimen/fifteendp"
+        android:layout_marginRight="@dimen/fifteendp"
+        android:layout_marginTop="@dimen/fivedp"
+        android:background="@drawable/num_bg"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:visibility="gone" />
+</RelativeLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/adapter_item_chatperson.xml -->

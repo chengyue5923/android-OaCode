@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="40dp">
+
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical"
+                  android:id="@+id/fristLayout"
+                  android:gravity="center_horizontal"
+            >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="0dp"
+                  android:gravity="center_vertical"
+                  android:layout_weight="1"
+                  android:id="@+id/fristTv"
+                  android:textSize="18sp"
+                  android:text="日志"/>
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="3dp"
+                   android:id="@+id/driverFrist"
+                   android:src="#1f5e8d"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical"
+                  android:id="@+id/sencondLayout"
+
+                  android:gravity="center_horizontal"
+            >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="0dp"
+                  android:gravity="center_vertical"
+                  android:layout_weight="1"
+                  android:textSize="18sp"
+                  android:id="@+id/secondTv"
+
+                  android:text="日志"/>
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="3dp"
+                   android:id="@+id/driverSend"
+
+                   android:src="#1f5e8d"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout android:layout_width="0dp"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical"
+                  android:id="@+id/thridLayout"
+                  android:gravity="center_horizontal"
+            >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="0dp"
+                  android:gravity="center_vertical"
+                  android:layout_weight="1"
+                  android:id="@+id/thridTv"
+
+                  android:textSize="18sp"
+                  android:text="日志"/>
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="3dp"
+                   android:id="@+id/driverThrid"
+                   android:src="#1f5e8d"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/view_three_tabs.xml -->

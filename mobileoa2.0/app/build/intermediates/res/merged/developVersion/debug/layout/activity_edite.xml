@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ededee"
+    android:orientation="vertical">
+
+    <com.idxk.mobileoa.android.ui.views.widget.MainTitleView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        main_title:leftImage="@drawable/title_back"
+        main_title:rightImage="@drawable/magnifying"
+        main_title:showLeft="true"
+        main_title:showRight="false"
+        main_title:titleCenter="@string/person_tab_MyData"></com.idxk.mobileoa.android.ui.views.widget.MainTitleView>
+
+    <RelativeLayout
+        android:id="@+id/imageLayout"
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/person_infor_layout_item_height"
+        android:onClick="layClick">
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_headImage" />
+
+
+        <ImageView
+            android:id="@+id/row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/row_item" />
+
+        <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+            android:id="@+id/iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@+id/row"
+            android:src="@drawable/ic_launcher"
+            main_title:border_color="#dddee0"
+            main_title:border_width="1dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/editPasswordLayout"
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/person_infor_layout_item_height"
+        android:onClick="layClick"
+
+        >
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_editePassword" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/row_item" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/person_infor_layout_item_height"
+
+        android:layout_marginTop="14dp">
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_name" />
+
+        <TextView
+            android:id="@+id/nameValue"
+            style="@style/person_infor_valueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/person_infor_layout_item_height"
+
+        >
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_account" />
+
+        <TextView
+            android:id="@+id/accountValue"
+            style="@style/person_infor_valueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/person_infor_layout_item_height"
+
+        >
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_company" />
+
+        <TextView
+            android:id="@+id/companyValue"
+            style="@style/person_infor_valueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+
+        android:layout_height="@dimen/person_infor_layout_item_height">
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_department" />
+
+        <TextView
+            android:id="@+id/departmentValue"
+            style="@style/person_infor_valueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+
+        android:layout_height="@dimen/person_infor_layout_item_height">
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_post" />
+
+        <TextView
+            android:id="@+id/postValue"
+            style="@style/person_infor_valueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bossLayout"
+        style="@style/person_infor_layout_item"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/person_infor_layout_item_height"
+        android:onClick="layClick">
+
+        <TextView
+            style="@style/person_infor_leftText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/person_infor_boss" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/row_item" />
+    </RelativeLayout>
+
+
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_edite.xml -->

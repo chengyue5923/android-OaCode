@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_bottom.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_top.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\dialog_root_show_amin.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\dialog_root_show_amin.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\snackbar_show_animation.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\snackbar_show_animation.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_in_bottom.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\dialog_main_show_amination.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\dialog_main_show_amination.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\dialog_root_hide_amin.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\dialog_root_hide_amin.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_slide_out_top.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_out.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.1\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\snackbar_hide_animation.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\snackbar_hide_animation.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\dialog_main_hide_amination.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\dialog_main_hide_amination.xml"
+    },
+    {
+        "merged": "D:\\shengui\\shengui\\shengui\\baseview\\build\\intermediates\\res\\merged\\release\\anim\\progress_indeterminate_animation.xml",
+        "source": "D:\\shengui\\shengui\\shengui\\baseview\\src\\main\\res\\anim\\progress_indeterminate_animation.xml"
+    }
+]

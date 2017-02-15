@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:main_title="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_fresh_layout" />
+
+    <com.idxk.mobileoa.android.ui.views.widget.ThreeTabsView
+        android:id="@+id/selectSendScope_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        main_title:titleFrist="@string/ranage_tab_title_frist"
+        main_title:titleSecond="选同事"
+        main_title:titleThrid="选部门" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/selectSendScope_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/selectScope_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:background="@color/light_grey"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/selectScope_hasSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hasSelected" />
+        <!--<ImageView android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginRight="@dimen/title_common_padding"-->
+        <!--android:src="@drawable/row_item"/>-->
+    </RelativeLayout>
+
+</LinearLayout><!-- From: file:/D:/oa/mobileoa2.0/app/src/main/res/layout/activity_selectsendscope.xml -->

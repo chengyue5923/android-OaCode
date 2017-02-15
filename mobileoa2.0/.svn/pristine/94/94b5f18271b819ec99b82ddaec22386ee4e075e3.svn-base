@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="tag_position"/>
+    <item type="id" name="tag_bean"/>
+    <item type="id" name="tag_view"/>
+    <item type="id" name="tag_isChecked"/>
+    <item type="id" name="tag_type"/>
+    <item type="id" name="tag_state"/>
+    <item type="id" name="tag_showAdapter_hold"/>
+</resources>

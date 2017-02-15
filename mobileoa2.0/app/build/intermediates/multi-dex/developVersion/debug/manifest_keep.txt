@@ -1,0 +1,90 @@
+-keep class com.idxk.mobileoa.android.application.MobileApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+-keep class com.idxk.mobileoa.android.ui.activity.LauncherActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.LoginActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.HomeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.HomeNewSunActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.WorkAlarmActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.im.ChatActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.AboutActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ApplicationAlarmActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SendShareActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.MessageReceivedActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.MessageSendActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ReplyActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ShowBigImageActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.WeiboDetailsActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.PraiseReceivedActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ReminderMeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.WaitForDealWithActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.WorkSendActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SearchActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.PersonInforActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.DraftActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SetActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SystemNotifyActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.EditeInoforActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.CommentDiaryActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SelectMobileActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.DealWithDiaryDetailsActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.AgreeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.DealWithCommandDetailsActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.PraiseReplyActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.DepartmentSelectionActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.DepartmentSunSelectionActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.DepartmentContectsActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ShareScopeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.FileShowListActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SendDiaryActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.EditeUserSignature { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SendCommandActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ChangePasswordActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ShowImageToolActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SendRangeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SelectSendScopeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.service.DownloadContactService { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SelectPersonActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.WebViewActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ContactDetailActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SendExamineActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.SelectImageActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.ShowImageActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.FeedBackActivity { <init>(); }
+-keep class com.umeng.update.net.DownloadingService { <init>(); }
+-keep class com.umeng.update.UpdateDialogActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.receiver.NeedLoginReceiver { <init>(); }
+-keep class com.idxk.mobileoa.android.receiver.MyPushMessageReceiver { <init>(); }
+-keep class com.baidu.android.pushservice.PushServiceReceiver { <init>(); }
+-keep class com.baidu.android.pushservice.RegistrationReceiver { <init>(); }
+-keep class com.baidu.android.pushservice.PushService { <init>(); }
+-keep class com.baidu.android.pushservice.CommandService { <init>(); }
+-keep class com.mogujie.tt.ui.activity.MessageActivity { <init>(); }
+-keep class com.mogujie.tt.imservice.service.IMService { <init>(); }
+-keep class com.mogujie.tt.imservice.service.LoadImageService { <init>(); }
+-keep class com.mogujie.tt.ui.activity.PreviewGifActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.PreviewMessageImagesActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.PickPhotoActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.ImageGridActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.PreviewActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.PreviewTextActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.UserInfoActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.GroupManagermentActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.GroupMemberSelectActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.SettingActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.SearchActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.WebViewFragmentActivity { <init>(); }
+-keep class com.mogujie.tt.ui.activity.DetailPortraitActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.NativeFilesActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.NativeCommonActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.approval.ApprovalInputActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.approval.ApprovalEditeActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.approval.ApprovalTypesActivity { <init>(); }
+-keep class com.idxk.mobileoa.android.ui.activity.approval.ApprovalShowActivity { <init>(); }
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+-keep public class * extends java.lang.annotation.Annotation {
+    *;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseframwork/baseframwork.iml" filepath="$PROJECT_DIR$/baseframwork/baseframwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseplatform/baseplatform.iml" filepath="$PROJECT_DIR$/baseplatform/baseplatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseview/baseview.iml" filepath="$PROJECT_DIR$/baseview/baseview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daogenerator/daogenerator.iml" filepath="$PROJECT_DIR$/daogenerator/daogenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mgimlibs/mgimlibs.iml" filepath="$PROJECT_DIR$/mgimlibs/mgimlibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobileoa2.0.iml" filepath="$PROJECT_DIR$/mobileoa2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teamtalkapp/teamtalkapp.iml" filepath="$PROJECT_DIR$/teamtalkapp/teamtalkapp.iml" />
+    </modules>
+  </component>
+</project>

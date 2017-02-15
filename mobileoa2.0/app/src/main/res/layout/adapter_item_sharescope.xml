@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.idxk.mobileoa.android.ui.views.widget.CircleImageView
+        android:id="@+id/shareScopePic"
+        android:layout_width="@dimen/button_common_length"
+        android:layout_height="@dimen/button_common_length"
+        android:layout_margin="@dimen/title_common_padding"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/shareScopePersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/app_name"
+        android:textColor="@color/black" />
+</LinearLayout>
